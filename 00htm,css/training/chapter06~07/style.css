@@ -1,0 +1,12 @@
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+div p { /*  */
+    color:red;
+}
+

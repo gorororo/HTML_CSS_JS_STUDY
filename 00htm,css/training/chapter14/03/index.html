@@ -1,0 +1,19 @@
+<style>
+    .box {
+        width: 400px;
+        height: 100px;
+        background-color: blueviolet;
+        position: relative;
+    }
+    .box::after {
+        content:"";
+        width: 400px;
+        height: 100px;
+        background-color: brown;
+        top: 110px;
+        position: absolute;
+    }
+</style>
+<body>
+    <div class="box"></div>
+</body>

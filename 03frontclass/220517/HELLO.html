@@ -1,0 +1,12 @@
+<style>
+h1{ color:blue; }
+</style>
+<h1>HELLO</h1>
+<button>0</button>
+<script>
+let button = document.querySelector('button'); 
+button.addEventListener('click',todoClick);
+function todoClick(){
+	button.innerText=Number(button.innerText)+1;
+}
+</script>

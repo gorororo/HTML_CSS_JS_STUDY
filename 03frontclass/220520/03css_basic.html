@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS연습</title>
+    <style>
+      /* 태그 선택자 */
+      h1{
+        color: red;
+      }
+      /* 전체 선택자(전체선택자는 태그선택자보다 우선순위가 낮다.) */
+      *{
+        color: aqua;
+      }
+      /* 클래스 선택자 (여러개 동시에 바꿀때 유리)*/
+      .bkcolor{
+        background-color: yellow;
+      }
+      .bkcolor2{
+       background-color: blue;
+      }
+      /* 아이디 선택자 (고유번호 한가지만 변경할떄 사용) */
+      #ptag{
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="bkcolor">CSS</h1>
+    <p class="bkcolor2">웹 표준에 의한 웹 문서는 디자인과 내용을 분리합니다.</p>
+    <p id="ptag">내용은 HTML로 구성하고 디자인은 CSS로 꾸며줍니다</p>
+  </body>
+</html>
