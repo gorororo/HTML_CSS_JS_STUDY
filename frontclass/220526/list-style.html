@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>목록 스타일</title>
+    <style>
+      div {
+        background-color: yellow;
+      }
+      ul {
+        /* list-style: none; */
+        list-style-type: none;
+        list-style-position: inside;
+        /* list-style-image: ; */
+        padding-left: 0;
+        /* border-style: solid;
+        border-color: red; 
+        border-width: 5px; */
+        border: 5px dotted red;
+      }
+      ol {
+        /* list-style-type: lower-alpha;
+        list-style-position: outside; */
+        list-style: upper-alpha inside;
+        padding-left: 0.5;
+        border: 3px dotted blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>회사</h1>
+    <hr />
+    <div>
+      <ul>
+        <li>회사소개</li>
+        <li>자료실</li>
+        <li>질문답변</li>
+        <li>오시는길</li>
+      </ul>
+      <ol>
+        <li>회사소개</li>
+        <li>자료실</li>
+        <li>질문답변</li>
+        <li>오시는길</li>
+      </ol>
+    </div>
+  </body>
+</html>

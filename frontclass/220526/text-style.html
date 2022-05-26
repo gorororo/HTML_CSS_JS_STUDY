@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>택스트 관련 스타일</title>
+    <style>
+      h1 {
+        background-color: aqua;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        line-height: 300px;
+        text-decoration: line-through;
+      }
+      p {
+        background-color: yellow;
+        text-align: left;
+        line-height: 3;
+        letter-spacing: 3;
+      }
+      span {
+        /* display block; */ /* 블록형으로 변환*/
+        background-color: blueviolet;
+        text-align: center;
+        width: 300px; /* inline형은 크기나 정렬이 안된다 */
+      }
+      a {
+        text-decoration: none;
+      }
+      .ptag {
+        text-shadow: 0px 0px 2px #f00;
+      }
+      p:nth-of-type(3) {
+        /*타입으로 수열관계 선택 */
+        color: #f00;
+        text-transform: lowercase; /*upercase 대문자로 lowercase 소문자로 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목입니다</h1>
+    <hr />
+    <span>문장을 입력합니다-1</span>
+    <span>문장을 입력합니다-1</span>
+    <hr />
+    <a href="#">링크</a>
+    <p class="ptag">p태그 문장입니다-1</p>
+    <p>p태그 문장입니다-1</p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure ipsum
+      unde<br />
+      id similique, deserunt dolores quia cupiditate blanditiis, amet alias<br />
+      aspernatur in. Rem illo in voluptatem possimus delectus quibusdam ab!
+    </p>
+    <p>
+      단위를 사용하여 글자 크기 지정하기<br />
+      고정형 px pt<br />
+      px 모니터의 1픽셀 기준으로 비율값 지정<br />
+      pt 포인트 글자크기<br />
+      가변형<br />
+      % 브라우저를 기준으로<br />
+      em(부모를 기준으로)<br />
+      rem(최상위를 기준으로)<br />
+    </p>
+  </body>
+</html>
