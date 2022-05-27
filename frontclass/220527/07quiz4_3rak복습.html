@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>표 퀴즈 실습</title>
+<style>
+  table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    caption-side: bottom;
+  }
+  td{
+    border: 1px solid black;
+    padding: 10px;
+  }
+  .heading{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #eee;
+  }
+</style>
+</head>
+<body>
+<table>
+  <caption>2019 국민 독서실태</caption>
+  <!-- <colgroup>
+    <col class="heading"> /*열선택 할떄 사용한다 클래스를 동일조건에 여러개 줄떄 유용하다*/
+    <col>
+    <col>
+  </colgroup> -->
+  <thead>
+    <tr>
+      <th class="heading">구분</th>
+      <th class="heading">성인</th>
+      <th class="heading">독서자</th>
+    </tr>
+    <tbody>
+      <tr>
+      <th class="heading">종이책</th>
+      <td>6.1권</td>
+      <td>11.8권</td>
+    </tr>
+    <tr>
+      <th class="heading">전자책</th>
+      <td>6.1권</td>
+      <td>11.8권</td>
+    </tr>
+    <tr>
+      <th class="heading">오디오북</th>
+      <td>0.2권</td>
+      <td>5.5권</td>
+    </tr>
+    </tbody>
+  </thead>
+</table>
+</body>
+</html>
