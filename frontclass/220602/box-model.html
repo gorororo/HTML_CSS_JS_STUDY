@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>박스모델</title>
+    <style>
+      /* 마진 패딩 은 위 아래 좌 우 ,3개: 일시 위 좌우 아래 2개 : 위아래 왼오 시작은 좌측위부터*/
+      div > div { /*자식 선택자는 꺽새로 표현해서 해당 자식만선택 공백으로 띄우면 자식관계를 모두 포함하여 스타일 지정한다*/
+        border: 2px solid #f00;
+        display: inline-block;
+        /* width: 200px;
+        padding: 15px; 
+        margin: 30px auto ;
+        box-sizing: border-box; 
+       */
+        
+      }
+      span{
+        border: 2px solid blue;
+        width: 200px;
+        margin: 0px auto;
+        padding: 10px 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>box1
+        <div>
+          box1-1
+        </div>
+      </div>
+      <div>box2</div>
+      <div>box3</div>
+    </div>
+    <div>
+      <span>span1</span>
+      <span>span2</span>
+      <span>span3</span>
+    </div>
+  </body>
+</html>
