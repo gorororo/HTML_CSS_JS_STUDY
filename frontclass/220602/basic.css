@@ -1,0 +1,46 @@
+@charset "UTF-8";
+*{
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+div{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+.title{
+  background-color: #FFC312;
+  width: 100%;
+  height: 15vh;
+}
+.banner{
+  background-color: #EA2027;
+  width: 100%;
+  height: 35vh;
+  
+}
+.gallery{
+  background-color: #0652DD;
+  width: 33.3333%;;
+  height: 25vh;
+  display: inline-block;
+}
+.notice{
+  background-color: #12CBC4;
+  width: 33.3333%;;
+  height: 25vh;
+  display: inline-block;
+}
+.info{
+  background-color: #D980FA;
+  width: 33.3333%;;
+  height: 25vh;
+  display: inline-block;
+  
+}
+footer{
+  background-color: grey;
+  width: 100%;
+  height: 25vh;
+}

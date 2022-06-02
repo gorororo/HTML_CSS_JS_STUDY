@@ -1,0 +1,25 @@
+@charset "utf-8";
+*{
+  margin:0;  /* 마진 초기화 */
+  padding:0;  /* 패딩 초기화 */
+}
+p {
+  width:300px;  /* 너비 - 300px */
+  border:1px solid #ccc;  /* 테두리 - 1픽셀 회색 실선 */
+  padding:10px;  /* 네방향 패딩 10px */
+}
+#pos1{
+  position:absolute;  /* 포지셔닝 - absolute */
+  left:50px;  /* 왼쪽에서 50px 떨어지게 */
+  top:50px;   /* 위쪽에서 50px 떨어지게 */
+}
+#pos2 {
+  position:absolute;  /* 포지셔닝 - absolute */
+  right:100px;  /* 오른쪽에서 100px 떨어지게 */
+  top:100px;  /* 위쪽에서 100px 떨어지게 */
+}
+#pos3 {
+  position: absolute;  /* 포지셔닝 - absolute */
+  left:100px;   /* 왼쪽에서 50px 떨어지게 */
+  bottom:100px;  /* 아래쪽에서 100px 떨어지게 */
+}
