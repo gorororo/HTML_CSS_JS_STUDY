@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>폼 삽입하기</title>
+  </head>
+  <body>
+    <form method="get">
+      <!-- <label>검색어 입력<input type="text"></label> -->
+      <div>
+        <label for="search">검색어 입력</label>
+        <input type="text" id="search" name="text" autocomplete="on" />
+        <input type="password" />
+        <input type="checkbox" name="자동로그인" id="자동로그인" />
+        <input type="range" />
+        <input type="submit" value="검색" />
+        <input type="radio" id="html" />
+        <label for="html">HTML</label>
+        <input type="radio" id="css" />
+        <label for="css">CSS</label>
+        <input type="radio" id="js" />
+        <label for="js">JavaScript</label>
+        <label><input type="radio" name="aaa" />html</label>
+        <label><input type="radio" name="aaa" />css</label>
+        <label><input type="radio" name="aaa" />js</label>
+      </div>
+      <div>
+        <input type="checkbox" id="num" name="num" />
+        <label for="num">전화번호</label>
+        <input type="checkbox" id="add" name="add" />
+        <label for="add">집주소</label>
+        <input type="checkbox" id="cadd" name="cadd" />
+        <label for="cadd">회사주소</label>
+      </div>
+      <fieldset>
+        <legend>로그인</legend>
+        <input type="text" name="login_text" />
+        <input type="button" value="입력" />
+        <input type="password" name="password_text" />
+        <input type="button" value="입력" />
+      </fieldset>
+      <input type="reset" value="초기화" />
+    </form>
+  </body>
+</html>
