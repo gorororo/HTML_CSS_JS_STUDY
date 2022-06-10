@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인폼</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <style>
+      .item{
+        position: relative;
+        margin-bottom: 15px;
+      }
+      .item > input{
+        box-sizing: border-box;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        padding-left: 50px;
+        outline: none;
+      }
+      .item .fa-solid{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        background-color: #ccc;
+        position: absolute;
+        left: 0;
+        line-height: 40px;
+        border-radius: 5px 0 0 5px;
+        color: #fff;
+      }
+      .item > input:focus{
+        border: 1px solid #3498db;
+        box-shadow: 0 0 4px #3498db;
+      }
+      .item > input:focus + .fa-solid{ /*인접연산자를 선택할때 이렇게*/
+        background-color: #3498db;
+      }
+      .item > input:focus::placeholder{  /*가상선택자를 선택할때 이렇게*/
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div id="container">
+          <div class="item">
+            <input type="text" id="uid" placeholder="Your name" />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="item">
+            <input type="text" id="uemail" placeholder="Email" />
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="item">
+            <input type="text" id="pnumber" placeholder="Phone Number" />
+            <i class="fa-solid fa-phone"></i>
+          </div>
+      </div>
+    </form>
+  </body>
+</html>
