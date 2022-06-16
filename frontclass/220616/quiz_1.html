@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>퀴즈2</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #wrapper{
+        width: 150px;
+        height: 150px;
+        position: relative;
+
+      }
+      #wrapper div{
+        width: 30px;
+        height: 30px;
+        background-color: midnightblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: move;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: Linear;
+      }
+      .so1{
+        background-color: magenta;
+        animation-delay: 0ms;
+      }
+      .so2{
+        background-color: mediumspringgreen;
+        animation-delay: 0.75s;
+      }
+      @keyframes move{
+        0%,100%{
+          top :0;
+          left :0;
+        }
+        25%{
+          top :0;
+          left : 120px; 
+          background-color: mediumslateblue;
+        }
+        50%{
+          top :120px;
+          left :120px; 
+          background-color: mediumvioletred;
+        }
+        75%{
+          top :120px;
+          left: 0;
+          background-color: mediumseagreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="wrapper">
+        <div class="so1"></div>
+        <div class="so2"></div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>애니메이션</title>
+    <style>
+      .box1{
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: crimson;
+        animation-name: width;
+        animation-duration: 2s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+      @keyframes change{
+        0%{
+          transform: rotate(0deg);
+        }
+        50%{
+          transform: rotate(35deg);
+        }
+        75%{
+          transform: rotate(-35deg);
+        }
+        100%{
+          transform: rotate(70deg);
+        }
+      }
+      @keyframes width {
+        0%{
+          width: 100px;
+          background-color: crimson;
+        }
+        100%{
+          width: 400px;
+          background-color: mediumspringgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+
+    </div>
+  </body>
+</html>

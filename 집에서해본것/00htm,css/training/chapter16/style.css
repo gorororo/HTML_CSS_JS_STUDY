@@ -49,11 +49,11 @@ body {
         border: none;
         padding: 1rem;
         outline: none;
-        border-radius: 50px;
+        border-radius: 30px;
     }
     .follow-btn button:hover {
         background-color: #efb10a;
-        transform: scale(1.1);
+        transform: scale(1.02);
     }
     .desc {
         padding: 1.5rem;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>애니메이션</title>
+    <style>
+      body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrapper div{
+        display: inline-block;
+        margin: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        animation-name: transform;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      main .round1
+      {
+        background-color: crimson;
+        animation-delay: 0s;
+      }
+      main .round2
+      {
+        background-color: mediumturquoise;
+        animation-delay: .2s;
+      }
+      main .round3
+      {
+        background-color: mediumslateblue;
+        animation-delay: .3s;
+      }
+      @keyframes transform{
+        0%,100%{
+          opacity: 0;
+          transform: scale(0.5);
+          }
+        50%{
+          opacity: 1;
+          transform: scale(1.4);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="round1">
+      </div>
+      <div class="round2">
+      </div>
+      <div class="round3">
+      </div>
+    </main>
+  </body>
+</html>

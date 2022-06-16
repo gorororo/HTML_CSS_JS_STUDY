@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스크류</title>
+    <style>
+      main {
+        width: 300px;
+        margin: 50px auto;
+        perspective: 500px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+      }
+      img {
+        width: 100%;
+      }
+      .box1{
+        transition: 0.8s;
+      }
+      .box1:hover {
+        transform: skewX(50deg)
+      }
+      .box2{
+        transition: 0.8s;
+      }
+      .box2:hover {
+        transform: skewY(50deg);
+      }
+      .box3 {
+        transition: 0.8s;
+      }
+      .box3:hover {
+        /* transform: skew(10deg,10deg); */
+        transform: scale(0.6,0.6) translate(300px,300px);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="box1">
+        <img src="../../frontclass/images/image-01.png" alt="이미지" />
+      </div>
+      <div class="box2">
+        <img src="../../frontclass/images/image-02.png" alt="이미지" />
+      </div>
+      <div class="box3">
+        <img src="../../frontclass/images/image-03.png" alt="이미지" />
+      </div>
+    </main>
+  </body>
+</html>
