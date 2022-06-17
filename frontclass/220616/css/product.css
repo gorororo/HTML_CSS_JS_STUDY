@@ -34,7 +34,7 @@ h1 {
   z-index: 10;
 }
 .prod-list li:hover .caption{
-  opacity: 90%;
+  opacity: 1;
   transform: translateY(-200px);
 }
 .prod-list .caption h2, .prod-list .caption p{

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>before, after 가상 선택자 연습</title>
+    <style>
+      .wrapper{
+        width: 800px;
+        margin: 100px auto;
+        text-align: center;
+        
+      }
+      a{
+        display: inline-block;
+        text-decoration: none;
+        width: 500px;
+        height: 50px;
+        color: #222;
+        font-size: 3em;
+      }
+      a:before{
+        content: 'new';
+        width: 80px;
+        height: 50%;
+        color: #fff;
+        background-color: crimson;
+        font-size: 0.7em;
+        border-radius: 5px;
+      }
+      a:after{
+        content: 'update';
+        text-transform:uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="#">SNS이동</a>
+    </div>
+  </body>
+</html>

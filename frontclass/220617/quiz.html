@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>퀴즈1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        line-height: 1.75em;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .progress {
+        width: 500px;
+        background-color: #333;
+        border-radius: 10px;
+        color: #fff;
+        padding: 20px;
+      }
+      .progress h1 {
+        text-align: center;
+      }
+      .item .level {
+        height: 10px;
+        background-color: yellow;
+        animation-name: move;
+        animation-duration: 1s;
+        /* width: 100%; */
+      }
+      .item .line {
+        border: 1px solid mediumseagreen;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      .item p span:first-child {
+        float: left;
+      }
+      .item p span:last-child {
+        float: right;
+      }
+      .item p::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .item:nth-of-type(1) .level{
+        width: 90%;
+      }
+      .item:nth-of-type(2) .level{
+        width: 80%;
+      }
+      .item:nth-of-type(3) .level{
+        width: 65%;
+      }
+      .item:nth-of-type(4) .level{
+        width: 70%;
+      }
+      .item:nth-of-type(5) .level{
+        width: 82%;
+      }
+      .item:nth-of-type(6) .level{
+        width: 92%;
+      }
+      @keyframes move{
+        0%{
+          width: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress">
+      <h1>SOFTWARE SKILLS</h1>
+      <div class="container">
+        <div class="item">
+          <p>
+            <span>HTML</span>
+            <span>90%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+        <div class="item">
+          <p>
+            <span>CSS</span>
+            <span>80%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+        <div class="item">
+          <p>
+            <span>JS</span>
+            <span>65%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+        <div class="item">
+          <p>
+            <span>React</span>
+            <span>70%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+        <div class="item">
+          <p>
+            <span>Python</span>
+            <span>82%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+        <div class="item">
+          <p>
+            <span>Next.js</span>
+            <span>92%</span>
+          </p>
+          <div class="line">
+            <div class="level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
