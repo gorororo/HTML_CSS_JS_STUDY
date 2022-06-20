@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>그리드 퀴즈2</title>
+    <style>
+      #wrapper{
+        display: grid;
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "head head head head"
+        "sec1 sec1 sec2 sec3"
+        "head head head head"
+        "head head head head";
+      }
+      .box{
+        border: 1px solid blue;
+      }
+      .head{
+        background-color: tomato;
+      }
+      .box:nth-child(1) {
+        background-color: mediumseagreen;
+        grid-area: sec1;
+      }
+      .box2{
+        background-color: yellow;
+        grid-area: sec2;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+      <header class="head">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+      </header>
+      <div id="wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+      </div>
+      <footer>
+        푸터
+      </footer>
+    </div>
+  </body>
+</html>

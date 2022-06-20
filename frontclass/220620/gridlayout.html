@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>그리드 레이아웃</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        /* display: flex;
+        justify-content: center; */
+      }
+      .container{
+        /* height: 100vh; */
+        display: grid;
+        margin: 0 auto;
+        /* grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px; */
+        /* grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr); */
+        /* grid-template-columns: 100px 100px auto; */
+        /* grid-template-columns: repeat(3, minmax(auto,300px)); */
+        /* grid-template-columns: repeat(auto-fill, minmax(20%,auto)); */
+        /* grid-template-columns: repeat(auto-fit, minmax(20%,auto)); */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:  "header header header"
+                              "main main aside"
+                              "footer footer footer";
+      }
+      .item{
+        border : 1px solid blue;
+        border-radius: 8px;
+        margin: 10px;
+      }
+      .item:nth-child(1){
+        grid-area: header;
+      }
+      .item:nth-child(2){
+        grid-area: main;
+      }
+      .item:nth-child(3){
+        grid-area: aside;
+      }
+      .item:nth-child(4){
+        grid-area: footer;
+      }
+      .container .item:nth-child(1){
+        background-color: mediumorchid;
+      }
+      .container .item:nth-child(2){
+        background-color: mediumpurple;
+      }
+      .container .item:nth-child(3){
+        background-color: mediumspringgreen;
+      }
+      .container .item:nth-child(4){
+        background-color: mediumturquoise;
+      }
+      .container .item:nth-child(5){
+        background-color: midnightblue;
+      }
+      .container .item:nth-child(6){
+        background-color: indianred;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <!-- <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">6</div> -->
+    </div>
+  </body>
+</html>

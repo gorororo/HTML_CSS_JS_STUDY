@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex 이해하기</title>
+    <style>
+      .container{
+        display: flex;
+        flex-wrap: wrap;
+        /*주축 설청*/
+        /* flex-direction: row; */
+        /*아이템 묶음*/
+        /* flex-wrap: wrap; */
+        /* flex-flow: row nowrap; */
+        /*주축 정렬 방식*/
+        /* justify-content: center; */
+        /*교차축 정렬 방식*/
+        /* align-items: baseline; */
+        /*교차축 정렬이 여러줄일때*/
+        /* align-content: space-around; */
+      }
+      .item{
+        background-color: crimson;
+        border: 1px dotted black;
+        /* flex-basis: 80px; */
+        /* width: 80px; */
+        word-wrap: break-word;
+        flex: 1 1 30%;
+        /* line-height: 150px; */
+      }
+      /*order 순서를 바꿔줄때 유용하다 기본값은 0 이고 큰숫자가 뒤로 붙는다 0보다 낮을려면 음수값을 주면 된다*/
+      /* .item:nth-child(2){
+        order: -1;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">box1</div>
+      <div class="item">box2</div>
+      <div class="item">box3</div>
+      <div class="item">box4</div>
+      <div class="item">box5</div>
+      <div class="item">box6</div>
+      <div class="item">box7</div>
+      <div class="item">box8</div>
+    </div>
+  </body>
+</html>
