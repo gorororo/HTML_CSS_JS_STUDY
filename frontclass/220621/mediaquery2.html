@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>미디어 쿼리</title>
+    <style>
+      body{
+        background-image: url('../images/image-01.png');
+        background-size: cover;
+      }
+        @media screen and (min-width : 320px){
+          body{
+          background-image: url('../images/image-02.png');
+        }
+      }
+        @media screen and (min-width : 760px){
+          body{
+          background-image: url('../images/image-03.png');
+        }
+      }
+        @media screen and (min-width : 1200px){
+          body{
+          background-image: url('../images/image-04.png');
+        }
+      }
+        @media screen and (min-width : 320px) {
+          body{
+          background-image: url('../images/image-05.png');
+        }
+      }
+        @media screen and (min-device-width : 812px) and (orientation : landscape) {
+          body{
+          background-image: url('../images/image-06.png');
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+  </body>
+</html>
