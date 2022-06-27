@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>grid example3</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px auto 100px;
+        gap: 10px;
+        grid-template-areas:
+          "header header header"
+          "main main aaa"
+          "btm btm btm";
+      }
+      header {
+        background-color: red;
+        grid-area: header;
+      }
+      main {
+        background-color: orange;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas:
+          "section section section"
+          "detail detail sidebar";
+        gap: 10px;
+        padding: 20px;
+      }
+      aside {
+        background-color: yellow;
+        grid-area: aaa;
+      }
+      footer {
+        background-color: green;
+        grid-area: btm;
+      }
+      main > .sec1 {
+        background-color: aqua;
+        grid-area: section;
+      }
+      main > .sec2 {
+        background-color: blue;
+        grid-area: detail;
+      }
+      main > .sec3 {
+        background-color: violet;
+        grid-area: sidebar;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main>
+        <section class="sec1"></section>
+        <section class="sec2"></section>
+        <section class="sec3"></section>
+      </main>
+      <aside></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>
