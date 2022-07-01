@@ -3,37 +3,66 @@
     margin: 0;
     padding: 0;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn label{
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: lightblue;
+    cursor: pointer;
 }
 input[name=tab]{
     display: none;
 }
-.btn label{
-    display: inline-block;
-    width: 150px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #2c3e50;
-    cursor: pointer;
-    text-align: center;
-    line-height: 30px;
-    color: beige;
-}
-
-input[id=tab1]:checked ~ .container .btn label[for=tab1],
-input[id=tab2]:checked ~ .container .btn label[for=tab2],
-input[id=tab3]:checked ~ .container .btn label[for=tab3]{
-    background-color: crimson;
-}
-
-/* .gradient{
+.tabs{
     width: 100vw;
     height: 100vh;
-    background: rgb(34,193,195);
-    background: linear-gradient(298deg, rgba(34,193,195,1) 0%, rgba(254,183,32,1) 100%);
-    opacity: 0.2;
-    z-index: 1;
-} */
+    position: relative;
+    overflow: hidden;
+}
+.items {
+    width: 300vw;
+    height: 300vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.items div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.items div:nth-child(1){
+    background-color: teal;
+}
+.items div:nth-child(2){
+    background-color: #3498db;
+}
+.items div:nth-child(3){
+    background-color: #c0392b;
+}
+.btn{
+    position: absolute;
+    bottom: 20px;
+    width: 100vw;
+    text-align: center;
+}
+input[id=tab1]:checked ~ .tabs .items{
+    left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items{
+    left: -100vw;
+}
+input[id=tab3]:checked ~ .tabs .items{
+    left: -200vw;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+    background-color: crimson;
+}

@@ -68,7 +68,7 @@ input[id="tab3"]:checked ~ .btn label[for="tab3"] {
     left: 20px;
     opacity: 0;
     transform: translateY(-50px);
-    transition: 0.5s;
+    transition: 1s;
 }
 .circle .text2 {
     background-color: lightslategray;
