@@ -1,0 +1,154 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.video_frame video{
+    position: fixed;
+    min-width: 100%; /*max-width*/
+    min-height: 100%;
+    z-index: -1;
+}
+.video_frame::before{
+    content: '';
+    background-image: linear-gradient(-130deg,crimson,transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    width: 40%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    color: #fff;
+    animation: move_wrapper;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.wrapper h1:nth-child(1){
+    color: crimson;
+}
+
+.wrapper h1 {
+    font-size: 50px;
+}
+
+.wrapper p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+.wrapper a{
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    border :2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    padding: 7px 10px;
+}
+.wrapper .text-book{
+    background-color: #fff;
+    color: #222;
+}
+
+.text-book:hover{
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+}
+.text-learn:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+@keyframes move_wrapper {
+    0%{
+        opacity: 0;
+        left: 0;
+    }
+    100%{
+        opacity: 1;
+        left: 10%;
+    }
+    
+}
+.Rwrapper{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    animation: move_Rwrapper;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+.Rwrapper div:nth-child(1){
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Rwrapper div:nth-child(2){
+
+    font-size: 110px;
+    font-family: 'Monoton';
+}
+
+@keyframes move_Rwrapper {
+    0%{
+        opacity: 0;
+        right: 0;
+    }
+    100%{
+        opacity: 1;
+        right: 10%;
+    }
+}
+input[id="menu"] {
+    display: none;
+}
+label[for="menu"] {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: 1;
+}
+label[for="menu"] span {
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transition: 0.3s;
+}
+label[for="menu"] span:nth-child(1) {
+    top: 0%;
+}
+label[for="menu"] span:nth-child(2) {
+    top: 50%;
+}
+label[for="menu"] span:nth-child(3) {
+    top: 100%;
+}
+/* 인풋이 메뉴인 체크박스가 체크되면 라벨 첫번째 스판이 로테이트 되게 */
+input[id="menu"]:checked + label[for="menu"] span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+}
+input[id="menu"]:checked + label[for="menu"] span:nth-child(2) {
+    opacity: 0%;
+}
+input[id="menu"]:checked + label[for="menu"] span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+.logo{
+    width: 150px;
+}
