@@ -1,0 +1,171 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #222;
+    /* menu style */
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+ul{
+    list-style: none;
+}
+
+/* menu 속성값 */
+.menu1{
+    position: relative;
+}
+.menu1::after{
+    content: '';
+    background-color: crimson;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.menu1:hover::after{
+    width: 100%;
+}
+.menu2{
+    position: relative;
+}
+.menu2::after{
+    content: '';
+    background-color: crimson;
+    width: 0;
+    height: 5px;
+    /* display: block; */
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+}
+.menu2:hover::after{
+    width: 100%;
+}
+.menu3{
+    position: relative;
+}
+.menu3::after{
+    content: '';
+    background-color: crimson;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.menu3:hover::after{
+    left: 100%;
+}
+.menu4{
+    position: relative;
+}
+.menu4::after{
+    content: '';
+    background-color: crimson;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transition: 0.5s;
+    /* transform: translateX(-50%); */
+}
+.menu4:hover::after{
+    
+    left: 0;
+    width: 100%;
+}
+.menu5{
+    position: relative;
+}
+.menu5::after{
+    content: '';
+    background-color: crimson;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.menu5:hover::after{
+    
+    left: 50%;
+    width: 0;
+}
+.menu6{
+    position: relative;
+    height: 53px;
+    overflow: hidden;
+}
+.menu6 > span{
+    color: #fff;
+    position: absolute;
+    transition: 0.5s;
+
+}
+.menu6 > span:first-child{
+    background-color: #222;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+.menu6 > span:last-child{
+    background-color: #fff;
+    color: #222;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+}
+.menu6:hover span:first-child{
+    top: -100%;
+}
+.menu6:hover span:last-child{
+    top: 0%;
+}
+
+.menu7{
+    position: relative;
+    width: 240px;
+    height: 53px;
+    overflow: hidden;
+}
+.menu7::before,
+.menu7::after{
+    content: attr(menu-text);
+    position: absolute;
+    color: #fff;
+    width: inherit;
+    height: inherit;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 53px;
+}
+.menu7::before{
+    background-color: tomato;
+    top: 0;
+}
+.menu7::after{
+    background-color: blue;
+    top: 100%;
+}
+.menu7:hover::before{
+    top: -100%;
+}
+.menu7:hover::after{
+    top: 0;
+}
