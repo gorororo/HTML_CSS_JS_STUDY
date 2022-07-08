@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+details summary{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+details summary::marker{
+    font-size: 0;
+}

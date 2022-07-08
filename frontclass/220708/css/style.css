@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* @import url('./reset.css'); */
+*{
+    font-family: 'Jua', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+    background-color: #F7F8F9;
+}
+
+/* 헤더 스타일 */
+header p{
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px #ccc;
+}
+header p a {
+    width: 55px;
+    height: 23px;
+    font-size: 16px;
+    color: #333;
+    border: 3px solid #333;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    line-height: 19.5px;
+    box-sizing: border-box;
+}
+/* 메인 스타일 */
+main{
+    height: calc(100vh - 42px);
+    
+}
+.login{
+    width: 300px;
+    margin: 50px auto;
+}
+.login-btn{
+    width: 100%;
+}
+.login-btn h1{
+    font-size: 30px;
+    text-align: center;
+}
+.login-btn p {
+    font-size: 12px;
+    color: #8a8c9b;
+    margin: 8px 0px;
+    position: relative;
+    text-align: center;
+}
+/* .login-btn p::before{
+    content: "";
+    flex-grow: 1;
+    margin: 0 16px;
+    background-color: #8a8c9b;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+}
+.login-btn p::after{
+    content: "";
+    flex-grow: 1;
+    margin: 0 16px;
+    background-color: #8a8c9b;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+} */
+.login-btn p::before,
+.login-btn p::after{
+    content: '';
+    height: 1px;
+    width: 43%;
+    background-color: #8a8c9b;
+    position: absolute;
+    top: 49%;
+    opacity: 0.9;
+}
+.login-btn p::before{
+    left: 0;
+}
+.login-btn p::after{
+    right: 0;
+}
+.login-btn a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin: 16px 0;
+    color: #fff;
+    border-radius: 2px;
+    opacity: 0.95;
+}
+.login-btn a:hover{
+    opacity: 1;
+}
+.login-btn a:nth-of-type(1){
+    background-color: #fff;
+    background-image: url(../img/phone.png);
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border: 1px solid #ccc;
+    color: #333;
+}
+.login-btn a:nth-of-type(2){
+    background-color: #8a8c9b;
+    background-image: url(../img/mail.png);
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.login-btn a:nth-of-type(3){
+    background-color: #03C75A;
+    background-image: url(../img/naver.png);
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.login-btn a:nth-of-type(4){
+    background-color: #0075FF;
+    background-image: url(../img/facebook.png);
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.login-btn a:nth-of-type(5){
+    background-color: #404049;
+    background-image: url(../img/apple.png);
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.login-footer p{
+    text-align: center;
+    font-size: 12px;
+    margin: 30px ;
+}
+.login-footer p a{
+    display: inline-block;
+    font-weight: bold;
+}
+.login-footer p a:hover{
+    text-decoration: underline;
+}
+.login-footer label{
+    font-size: 12px;
+    color: #8a8c9b;
+}

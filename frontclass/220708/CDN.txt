@@ -1,0 +1,13 @@
+네이버 밴드 로그인 화면 클론 코딩
+
+#888888 휴대폰 색
+#8a8c9b 이메일 로그인
+#03c75a 네이버 로그인
+#0075ff 페이스북 로그인
+#777777 나머지 글자색
+#2b2b31 애플로그인
+
+버튼사이즈 250px 50px
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+font-family: 'Nanum Gothic', sans-serif;
