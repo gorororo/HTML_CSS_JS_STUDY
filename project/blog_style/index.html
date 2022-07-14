@@ -5,23 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/index.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap"
-        rel="stylesheet"
-    />
-        <title>Rak portfolio</title>
+            href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/snsiconre.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        />
+        <title>RAK</title>
     </head>
     <body>
         <header>
             <div class="headwrapper">
                 <div class="logos">
-                    <a href="#" class="logo"><span>G</span>wang <span>R</span>ak</a>
+                    <img src="./img/logogr.png" alt="logo" />
+                    <a href="index.html"></a>
                 </div>
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="./index.html">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">PROJECT</a></li>
                     <li><a href="#">CONTACT</a></li>
@@ -30,43 +35,83 @@
         </header>
         <main>
             <div class="container">
-                <div class="imgbg">
-                    <img src="./img/bg.jpg" alt="img">
-                    <div class="bgdown"></div>
-                </div>
-                <h1>PORTFOLIO</h1>
-                <h2>I`M A FRONTEND DEVELOPER</h2>
-            </div>
-            <input type="radio" name="tab" id="tab1" checked>
-            <input type="radio" name="tab" id="tab2">
-            <input type="radio" name="tab" id="tab3">
-            <div class="btn">
-                <label for="tab1"></label>
-                <label for="tab2"></label>
-                <label for="tab3"></label>
-            </div>
-            <div class="wrapper">
-                <div class="tab_item">
-                    <div class="item">
-                        <div class="circle">D</div>
-                        <div>DESIGN</div>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, laudantium quod! Praesentium odio quod eius perspiciatis eligendi quo soluta magni corporis, ea eos saepe dolorem quae aliquid consequuntur aperiam neque!</div>
-                    </div>
-                    <div class="item">
-                        <div class="circle">P</div>
-                        <div>PUBLISING</div>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, laudantium quod! Praesentium odio quod eius perspiciatis eligendi quo soluta magni corporis, ea eos saepe dolorem quae aliquid consequuntur aperiam neque!</div>
-                    </div>
-                    <div class="item">
-                        <div class="circle">D</div>
-                        <div>DEVELOPER</div>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, laudantium quod! Praesentium odio quod eius perspiciatis eligendi quo soluta magni corporis, ea eos saepe dolorem quae aliquid consequuntur aperiam neque!</div>
+                <div class="black">
+                    <img src="./img/black.svg" alt="" />
+                    <div class="detail_black">
+                        <h1>UI / UX</h1>
+                        <p>Designer</p>
+                        <p>사용자 중심 의 편리한 디자인</p>
+                        <p>
+                            시스템 디자인 <br />사용자 편리를 위한<br> 최선을
+                            생각하는 디자이너 입니다.
+                        </p>
                     </div>
                 </div>
+                <div class="white">
+                    <img src="./img/white.svg" alt="" />
+                    <div class="detail_white">
+                        <h1>&ltDEVELOPER&gt</h1>
+                        <p>Frontend</p>
+                        <p>깨끗한코드 효율적인 프론트엔드 개발자 </p>
+                        <p>
+                            클린한 코드 체계적인 작업 <br />언제나 발전을 추구하는 개발자 입니다
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="mid">PROJECT</p>
+            <div class="maincontent">
+                <div class="maindetail">
+                    <div class="mdt1">
+                        <h3>프로젝트1</h3>
+                        <img src="./img/bg.jpg" alt="" />
+                        <h2>프로젝트설명</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                        </p>
+                    </div>
+                    <div class="mdt2">
+                        <h3>프로젝트2</h3>
+                        <img src="./img/bg.jpg" alt="" />
+                        <h2>프로젝트설명</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                        </p>
+                    </div>
+                    <div class="mdt3">
+                        <h3>프로젝트3</h3>
+                        <img src="./img/bg.jpg" alt="" />
+                        <h2>프로젝트설명</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="mid2">SKILL</p>
+            <div class="skill">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sns">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </main>
         <footer>
-            
+            <p>ⓒ gwang rak choi</p>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PROJECT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
         </footer>
     </body>
 </html>
