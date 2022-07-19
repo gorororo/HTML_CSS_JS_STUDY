@@ -206,7 +206,7 @@ header {
 .mid::after {
     content: "";
     height: 2px;
-    width: 32%;
+    width: 34%;
     background-color: #ddd;
     position: absolute;
     top: 50%;
@@ -317,10 +317,10 @@ header {
 }
 /* sns icon */
 .sns {
-    margin-left: 25%;
+
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(+50%);
 }
 .sns a {
     box-sizing: border-box;
@@ -349,23 +349,18 @@ header {
     background-color: #fff;
 }
 .sns a:nth-child(2)::before {
-    background-color: #B3261E;
+    background-color: #b3261e;
 }
 .sns a:nth-child(3)::before {
     background: rgb(246, 2, 208);
-    background: linear-gradient(
-        0deg,
-        #4EC53D 0%,
-        #5db152 44%,
-        #88b681 100%
-    );
+    background: linear-gradient(0deg, #4ec53d 0%, #5db152 44%, #88b681 100%);
 }
 
 .sns a:hover::before {
     height: 100%;
 }
 .sns a:hover i {
-    color: #000;
+    color: #222;
     transform: rotateY(360deg);
 }
 .sns i {

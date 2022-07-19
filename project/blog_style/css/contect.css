@@ -53,6 +53,106 @@ header {
     left: 0;
     width: 100%;
 }
+/* 메인 */
+.wrapper{
+    width: 70%;
+    height: 40vh;
+    background-color: #222;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txt{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.icons{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper a{
+    width: 50%;
+    height: 50%;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 74px;
+    font-size: 25px;
+}
+.icons>a:nth-child(1):hover{
+    color: #b3261e;
+}
+.icons>a:nth-child(2):hover{
+    color: #3b5998;
+}
+.icons>a:nth-child(3):hover{
+    color:  rgb(177, 90, 19);
+}
+.icons>a:nth-child(4):hover{
+    color: #fae100;
+}
+.txt {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+.txt h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.contact{
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/Contact.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* 메인 두번째 줄 */
+.wrapper2{
+    width: 70%;
+    height: 40vh;
+    background-color: #eee;
+    margin: 5px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper2 .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left h1{
+    font-size: 25px;
+    text-align: center;
+}
+.left .detail{
+    width: 45%;
+    height: 120px;
+}
+.wrapper2 .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right>p{
+    
+}
 /* 카톡버튼 */
 .detail .kakaobtn{
     margin: 0 auto 0 auto ;
@@ -62,39 +162,40 @@ header {
     position: relative;
 }
 .kakaobtn a:hover{
-    background-color: #757575;
+    background-color: #fae100;
     color: #fff;
 }
-.detail img{
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 25px;
-    z-index: 2;
-
+.kakaowrap{
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-.detail span{
+.kakaowrap span{
     font-size: 8px;
     color: #757575;
 }
-.detail .btn {
+.kakaowrap a{
+
+    display: inline-block;
+
+}
+.kakaowrap .btn {
     width: 100px;
-    text-align: end;
-    padding-right: 25px;
+    text-align: center;
     background-color: #222;
     color: #a2b5bb;
-    line-height: 25px;
     border-radius: 5px;
-    position: absolute;
-    top: 0;
-    left: 25px;
 }
 /* sns icon */
 .sns {
-    margin-left: 25%;
+
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(+62%);
 }
 .sns a {
     box-sizing: border-box;
@@ -134,7 +235,7 @@ header {
     height: 100%;
 }
 .sns a:hover i {
-    color: #000;
+    color: #222;
     transform: rotateY(360deg);
 }
 .sns i {

@@ -55,8 +55,8 @@ header {
 /* 메인 */
 main > div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+
 }
 .mainwrapper {
     margin: 0 auto;
@@ -67,6 +67,7 @@ main > div {
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: row;
 }
 .mainright .black {
     background-image: url(../img/developer.svg);
@@ -87,10 +88,9 @@ main > div {
     height: 100%;
 }
 .detail {
-    padding: 25px 105px;
+    text-align: center;
     width: 50%;
-    height: 100%;
-
+    padding: 15px;
 }
 .detail h1 {
     font-size: 102px;
@@ -108,7 +108,6 @@ main > div {
 .mainright2 {
     width: 70%;
     height: 55vh;
-
     margin: 0 auto;
 }
 .mainright2 .black2 {
@@ -121,13 +120,42 @@ main > div {
     height: 100%;
 }
 .detail2 {
-    padding-right: 125px;
+    width: 50%;
+    text-align: center;
 }
 .detail2 h1 {
     font-size: 45px;
     margin-bottom: 10px;
 }
 .detail2 ul li {
+    list-style: none;
+    margin: 2px;
+    font-weight: 500;
+}
+/* 메인3 */
+.mainright3 {
+    width: 70%;
+    height: 55vh;
+    margin: 0 auto;
+}
+.mainright3 .black3 {
+    background-image: url(../img/work.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #222;
+    background-size: contain;
+    width: 50%;
+    height: 100%;
+}
+.detail3 {
+    width: 50%;
+    text-align: center;
+}
+.detail3 h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.detail3 ul li {
     list-style: none;
     margin: 2px;
     font-weight: 500;
@@ -198,10 +226,10 @@ main > div {
 /* 프로젝트 메인 */
 /* sns icon */
 .sns {
-    margin-left: 25%;
+
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(+50%);
 }
 .sns a {
     box-sizing: border-box;

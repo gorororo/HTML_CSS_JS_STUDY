@@ -89,29 +89,27 @@ header {
     margin: 0 auto;
 }
 .top{
-    width: 60%;
-    height: 100%;
-    margin-top: 65px;
+    width: 50%;
+    padding-left: 100px;
 }
 .top h1{
     font-size: 55px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
 }
 .top p{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 16px;
     font-weight: 400;
 }
 .project .img{
-    width: 40%;
+    width: 50%;
     height: 100%;
     background-image: url(../img/portfolio.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 150px;
 }
 /* 메인 프로젝트 부분 */
 .maincontent {
