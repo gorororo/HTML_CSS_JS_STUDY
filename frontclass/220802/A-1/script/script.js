@@ -1,7 +1,7 @@
 $(
     function(){
         //메뉴 슬라이드
-        $('submenu').slideUp(0);
+        $('.submenu').slideUp(0);
         $('.mainmenu').hover(
 
             function(){
@@ -30,8 +30,8 @@ $(
         //공지사항 class on
         $('.tabmenu li').click(function(){
             let pos = $(this).index();
-            $('tabitem ul').removeClass('on');
-            $('tabitem ul').eq(pos).addClass('on');
+            $('.tabitem ul').removeClass('on');
+            $('.tabitem ul').eq(pos).addClass('on');
 
             $('.tabitem li').removeClass('on');
             $(this).addClass('on');
