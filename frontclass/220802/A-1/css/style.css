@@ -1,0 +1,164 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #000;
+    font-size: 14pt;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+/**header**/
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header .logo{
+    width: 15%;
+    height: 40px;
+    text-align: center;
+}
+/* header nav menu */
+header nav{
+    width: 60%;
+    height: 40px;
+}
+.mainmenu > a{
+    background-color: #ddd;
+    font-weight: bolder;
+}
+header nav > ul{
+    display: flex;
+    text-align: center;
+}
+header nav > ul > li{
+    width: 25%;
+    position: relative;
+    line-height: 40px;
+}
+header nav > ul > li > .submenu{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    
+}
+.submenu{
+    display: none;
+}
+.submenu li{
+    background-color: #fff;
+}
+.submenu a{
+    font-size: 14px;
+}
+.menu > li:hover > a{
+    background-color: crimson;
+    color: #fff;
+}
+.submenu a:hover{
+    background-color: rgb(218, 48, 82);
+    color: #fff;
+}
+
+
+/* contents */
+.contants{
+    height: 200px;
+    display:flex
+}
+/* slide */
+.slide{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+.slide-list{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.slide-list img{
+    display: block;
+}
+.contants{
+    width: 100%;
+}
+/* tab */
+.tab{
+    position: relative;
+}
+.tab .tabitem .gallery{
+    display: none;
+}
+.tab .tabitem>ul.on{
+    background-color: crimson;
+}
+.tab > .tabmenu li.on a{
+    background-color: crimson;
+}
+.tab > .tabmenu li{ 
+    display: inline-block;
+    margin-left: 10px;
+}
+.tab > .tabmenu a{
+    padding: 10px;
+    font-weight: bolder;
+}
+.tabitem ul{
+    position: absolute;
+    top: 60px;
+    left:15px;
+}
+.gallery{
+    display: flex;
+}
+.contants .tabmenu{
+    width: 400px;
+    height: 200px;
+}
+/* contants style */
+.contants .banner{
+    width: 400px;
+    height: 200px;
+}
+.contants .link{
+    width: 400px;
+    height: 200px;
+}
+.sns img{
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+/* footer */
+footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+footer div{
+    width: 20%;
+    height: 40px;
+}
+footer p {
+    width: 60%;
+    height: 40px;
+
+    line-height: 40px;
+}
