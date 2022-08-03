@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "UTF-8";
 
 *{
     margin: 0;
@@ -15,6 +15,22 @@ a{
     display: block;
     text-decoration: none;
 }
+/*popbox  */
+.popbox{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #222;
+    z-index: 20;
+}
+
+
 .wrapper{
     width: 1200px;
     margin: 0 auto;
@@ -100,6 +116,7 @@ header nav > ul > li > .submenu{
 /* tab */
 .tab{
     position: relative;
+    background-color: crimson;
 }
 .tab .tabitem .gallery{
     display: none;
@@ -108,11 +125,11 @@ header nav > ul > li > .submenu{
     background-color: crimson;
 }
 .tab > .tabmenu li.on a{
-    background-color: crimson;
+    background-color: aquamarine;
 }
 .tab > .tabmenu li{ 
     display: inline-block;
-    margin-left: 10px;
+    
 }
 .tab > .tabmenu a{
     padding: 10px;
@@ -120,12 +137,22 @@ header nav > ul > li > .submenu{
 }
 .tabitem ul{
     position: absolute;
-    top: 60px;
-    left:15px;
+    width: 400px;
+    height: 77.5%;
+    top: 45px;
+    left:0px;
+}
+.gallery li{
+    width: 100px;
+}
+.gallery a{
+    width: 100px;
 }
 .gallery{
-    display: flex;
+    width: 100px;
+    
 }
+
 .contants .tabmenu{
     width: 400px;
     height: 200px;
@@ -143,6 +170,7 @@ header nav > ul > li > .submenu{
     width: 20px;
     height: 20px;
     float: left;
+    margin-top: 4%;
 }
 
 /* footer */

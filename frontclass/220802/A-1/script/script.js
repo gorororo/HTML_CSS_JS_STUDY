@@ -30,12 +30,20 @@ $(
         //공지사항 class on
         $('.tabmenu li').click(function(){
             let pos = $(this).index();
-            $('.tabitem ul').removeClass('on');
-            $('.tabitem ul').eq(pos).addClass('on');
+            $('.tabitem ul').hide().removeClass('on');
+            $('.tabitem ul').eq(pos).show().addClass('on');
 
             $('.tabitem li').removeClass('on');
             $(this).addClass('on');
         });
+
+        //popbox
+        $('.notice li:first-child').click(function(){
+            $('.popbox').fadeIn(600);
+        });
+        $('.popbox>a').click(function(){
+            $('.popbox').fadeOut(200);
+        })
 
     }
 );
