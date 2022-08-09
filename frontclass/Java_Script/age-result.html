@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>나이 계산하기</title>
+    </head>
+    <style>
+        .wrapper{
+            width: 100vh;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            background-color: crimson;
+            font-size: 22px;
+            color: #fff;
+        }
+        button:hover{
+            background-color: rgb(94, 10, 26);
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <button onclick="ageClac()">나이계산</button>
+            <div id="calc" class="reseult">당신의 나이는 = </div>
+        </div>
+        <script>
+            function ageClac(){
+                const CURRENT_YEAR= 2022;
+                let birthYear = prompt('태어난 연도를 입력하세요 : ex)YYYY');
+                let age = (CURRENT_YEAR-birthYear)+1;
+                // let tagDiv = document.querySelector('#calc');
+                // let tagDiv=null;
+                tagDiv = document.getElementById('calc')
+                // let tagDiv=null;
+                // tagDiv = document.getElementsByClassName('reseult');
+                // console.log(tagDiv[0]);
+                tagDiv.innerText = '당신의 현재 나이는 = '+ age + '입니다';
+            }
+
+        </script>
+    </body>
+</html>

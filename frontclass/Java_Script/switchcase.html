@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>swichcase</title>
+    </head>
+    <style>
+        body{
+            background-color: blue;
+            color: #eee;
+            text-align: center;
+        }
+        div{
+            margin-top: 100px;
+            font-size: 2rem;
+            font-weight: bolder;
+            text-shadow: 1px 2px 1px #000;
+        }
+        div strong{
+            color: yellow;
+            font-size: 3.4rem;
+        }
+
+    </style>
+    <body>
+        <div class="container"><p>마케팅세션은 <strong>201호</strong> 에서 진행됩니다.</p></div>
+        <script>
+            let session = prompt("관심섹션을 입력하세요 1-마케팅 2-개발 3-디자인");
+            let txtContents=null;
+            switch (session) {
+                case '1':
+                    txtContents='<p>마케팅세션은 <strong>201호</strong> 에서 진행됩니다.</p>'
+                    break;
+                case '2':
+                    txtContents='<p>개발세션은 <strong>302호</strong> 에서 진행됩니다.</p>'
+                    break;
+                case '3':
+                    txtContents='<p>디자인세션은 <strong>203호</strong> 에서 진행됩니다.</p>'
+                    break;
+                default:
+                    txtContents='<p>잘못입력 하셨습니다.</p>'
+                    ;
+            }
+            const elemDiv = document.querySelector('div');
+            elemDiv.innerHTML = txtContents;
+        </script>
+    </body>
+</html>
