@@ -8,4 +8,5 @@ details summary{
 
 details summary::marker{
     font-size: 0;
+    background-color: #222;
 }
