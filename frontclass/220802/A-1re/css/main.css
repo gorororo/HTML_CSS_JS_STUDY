@@ -5,7 +5,6 @@
     margin: 0;
     list-style: none;
     text-align: none;
-    font-size: 16px;
     /* background-color: #fff; */
     color: #333;
     font-family: sans-serif,'맑은 고딕';
@@ -41,23 +40,25 @@ header nav{
     width: 20%;
 }
 nav > ul{
-    height: 100px;
+    width: 100%;
+    height: 44px;
     display: flex;
     justify-content: end;
     align-items: flex-end;
 
 }
+nav ul li{
+    width: 25%;
+}
 nav ul a{
     text-align: center;
     background-color: #fff;
     padding: 10px;
-    width: 100px;
+    
 }
 .mainmenu > a{
     position: relative;
     font-size: 18px;
-    font-weight: bolder;
-    
 }
 .submenu{
     display: inline-block;
@@ -70,7 +71,8 @@ ul .mainmenu:hover > a{
     color: #eee;
 }
 .submenu li:hover > a{
-    background-color: rgb(204, 53, 83);;
+    background-color: rgb(199, 102, 121);;
+    color: #eee;
 }
 /* slide */
 .slidecontainer{
@@ -98,32 +100,147 @@ ul .mainmenu:hover > a{
 .content{
     width: 1200px;
     height: 200px;
-    background-color: aqua;
     display: flex;
 }
 .tab{
     width: 35%;
-    height: 100%;
-    background-color: #333;
+    height: 200px;
+    
 }
 .tabmenu{
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(206, 150, 161);
+    display: inline-block;
+}
+
+.tabmenu h3{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bolder;
+    height: 100%;
+}
+.tabmenu h3 a{
+    padding: 10px;
+    height: 100%;
+}
+.tabmenu:hover .on{
+    background-color: crimson
+}
+.tablist > .on{
+    background-color: rgb(206, 185, 189);
 }
 .tablist{
     width: 100%;
     height: 80%;
-    background-color: aquamarine;
+}
+.notice{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.notice li{
+    width: 100%;
+    line-height: 2.2;
+    display: flex;
+    margin-left: 10px;
+
+}
+.notice li a{
+    width: 70%;
+    white-space :nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.notice li p{
+    width: 30%;
+    margin-left: 30px;
+}
+.notice li:hover{
+    text-decoration: underline;
+}
+.gallery{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    display: none;
 }
 
+.gallery li a{
+    width: 100%;
+    height: 100%;
+}
+.gallery li a img{
+    width: 90%;
+    height: 90%;
+}
 .banner{
     width: 32.5%;
     height: 100%;
     background-color: aquamarine;
+    position: relative;
+    overflow: hidden;
+}
+.banner h2{
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner img{
+    height: 100%;
 }
 .link{
     width: 32.5%;
     height: 100%;
     background-color :rgb(204, 53, 83);
+    overflow: hidden;
+    position: relative;
+}
+.link h2{
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+}
+.flogo{
+    width: 20%;
+}
+footer p{
+    width: 60%;
+    text-align: center;
+}
+footer .sns{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 35px;
+}
+footer .sns li img{
+    width: 50%;
+    height: 50%;
 }

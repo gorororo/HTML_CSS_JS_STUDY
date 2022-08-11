@@ -65,4 +65,4 @@ function slide()
     index=0;
     }
 }
-setInterval("slide()",2000);
+setInterval("slide()",3000);
