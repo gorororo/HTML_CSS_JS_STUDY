@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>clickEventlistener</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .wrapper{
+                width: 500px;
+                height: auto;
+                margin: auto;
+                position: relative;
+                box-sizing: unset;
+            }
+            div a img{
+                width: 100%;
+                
+            }
+            button{
+                background-color: #fff;
+                opacity: 0.8;
+                border: 1px solid #222;
+
+            }
+            .wrapper .open{
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+            }
+            .items{
+                width: 90%;
+                display: none;
+                text-align: center;
+                margin: auto;
+            }
+                
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <a href="#"><img src="../../images/cafe-1.jpg" ondblclick="eClick()"alt="img1"></a>
+            <button class="open">상세 설명 보기</button>
+            <div class="items">
+                <h1>카페</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro modi quos eaque molestiae enim saepe recusandae soluta libero omnis amet asperiores, error aliquid accusantium temporibus maiores numquam veniam ipsam harum!</p>
+                <button class="close">상세설명 닫기</button>
+            </div>
+        </div>
+        <script>
+            let elemBorder = document.querySelector('img');
+
+            elemBorder.addEventListener('mouseenter',()=>{
+                elemBorder.style.outline = '5px solid red';
+            });
+            elemBorder.addEventListener('mouseleave',()=>{
+                elemBorder.style.outline = 'none';
+            });
+
+            let eClick = ()=>{
+                let elemItems = document.querySelector('.items');
+                    console.log(elemItems);
+                    elemItems.style.display = 'block';
+                let hideBtn = document.querySelector('.open');
+                    hideBtn.style.display = 'none';
+            };
+            let elemBtn =document.querySelector('.open');
+            elemBtn.onclick = eClick;
+
+            let endClick = ()=>{
+                let elemItems = document.querySelector('.items');
+                    elemItems.style.display = 'none';
+                let hideBtn = document.querySelector('.open');
+                hideBtn.style.display = 'block';
+            
+            };
+
+            let endBtn = document.querySelector('.close');
+            endBtn.onclick = endClick;
+
+        </script>
+    </body>
+</html>
