@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>쇼핑몰 오브젝트 구현</title>
+        <style>
+            *{margin: 0; padding: 0;}
+            li{list-style: none;}
+            h1{text-align: center; margin: 20px;}
+            #wrapper{
+                width: 700px;
+                margin: 0 auto;
+                display: flex;
+            }
+            #detail{
+                width: 300px;
+            }
+            .big-wrap{
+                position: relative;
+                width: 300px;
+                height: 300px;
+            }
+            .big-wrap button{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 50%;
+                cursor: pointer;
+                transform: translateY(-50%);
+            }
+
+            .big-wrap button:first-child{
+                left: 3px;
+            }
+            .big-wrap button:last-child{
+                right: 3px;
+            }
+            .big-wrap > img {
+                width: 100%;
+            }
+            .small-wrap{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+            .small-wrap img{
+                width: 30%;
+            }
+            #prod-txt li{
+                line-height: 2.1;
+                margin-left: 100px;
+                
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>쇼핑몰 아이템 상세 보기</h1>
+        <div id="wrapper">
+            <div id="detail">
+                <div id="prod-img">
+                    <div class="big-wrap">
+                        <img src="./gal1.png" alt="big-image">
+                        <div class="big-btn div">
+                            <button class="slide_btn_prev">&lt</button class="slide_btn_next">
+                            <button>&gt</button>
+                        </div>
+                        <div class="small-wrap">
+                            <img src="./gal1.png" alt="s01">
+                            <img src="./gal2.png" alt="s02">
+                            <img src="./gal3.png" alt="s03">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="prod-txt">
+                <ul>
+                    <li><span>상품명</span> : 상품명 이름기재</li>
+                    <li><span>판매가</span> : 9000원</li>
+                    <li><span>배송비</span> : 3000원</li>
+                    <li>(50,000이상 구매시 무료)</li>
+                    <li><span>적립금</span> : 180원(2%)</li>
+                    <li><span> 제조일자</span> : 2022.08.12</li>
+                    <li><button> 장바구니 담기 </button></li>
+                </ul>
+            </div>
+        </div>
+        <script src="./slideshop.js"></script>
+    </body>
+</html>

@@ -51,7 +51,7 @@ $(function(){
 
 
 
-var image = document.getElementById("sss");
+// var image = document.getElementById("sss");
 
 var img_array=['img/slide2.png','img/slide3.png','img/slide1.png'];
 var index=0;
@@ -59,10 +59,12 @@ function slide()
 {
 
     document["sss"].src = img_array[index];
+    console.log(document["sss"]);
+    console.log(document["sss"].src);
     index++;
     if(index>=img_array.length)
     {
     index=0;
     }
 }
-setInterval("slide()",3000);
+setInterval(slide,3000);

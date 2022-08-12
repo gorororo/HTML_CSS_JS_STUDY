@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>To Do List</title>
+        <style>
+            html,
+            body {
+                width: 50%;
+                margin: 0 auto;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container {
+                width: 360px;
+            }
+
+            #inputFiled {
+                width: 300px;
+                height: 46px;
+                border: 1px solid black;
+                outline: none;
+                font-size: 25px;
+                vertical-align: middle;
+            }
+
+            .to-dos {
+                margin-top: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>To Do List</h1>
+        <div class="container">
+            <input id="inputField" type="text" />
+            <!--text 입력창(할일 입력창) 만들기-->
+            <button id="addToDo">+</button>
+            <!-- + 버튼 만들기 -->
+            <div class="to-dos" id="toDoList"></div>
+            <!-- id = inputField에 할일이 입력되고 + 버튼이 눌리면 할일이 나타날 공간 만들기-->
+        </div>
+        <script src="04array.js"></script>
+        <!--javascript 파일 참조하기-->
+    </body>
+</html>

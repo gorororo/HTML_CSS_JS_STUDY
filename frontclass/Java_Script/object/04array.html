@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *{margin: 0; padding: 0;}
+            .wrapper{
+                width: 600px;
+                margin: 0 auto;
+            }
+            .wrapper > ul{
+                list-style: none;
+                padding: 10px 20px;
+            }
+            h1{
+                text-align: center;
+            }
+            form{
+                background-color: rgb(72, 72, 119);
+                padding: 30px 40px;
+            }
+            form input{
+                width: 400px;
+                height: 20px;
+                padding: 10px;
+                margin-left: 5px;
+
+            }
+            form button{
+                width: 80px;
+                height: 40px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>To do list</h1>
+            <form onsubmit="return false;">
+                <input type="text" id="inputField" autofocus="" >
+                <button id="addToDo">추가</button>
+            </form>
+            <ul class="toDoList"></ul>
+        </div>
+        <script src="./04array.js"></script>
+    </body>
+</html>
