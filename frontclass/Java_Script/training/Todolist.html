@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        #wrapper{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background-color: #eee;
+            
+        }
+        #wrapper h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form{
+            background-color: darkcyan;
+            padding: 20px;
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            width: 300px;
+        }
+        button{
+            height: 30px;
+            width: 50px;
+            text-align: center;
+            border: none;
+        }
+        #warpper ul{
+            list-style: none;
+            padding:  10px 20px;
+            background-color: bisque;
+            width: 100%;
+            height: 300px;
+            
+            
+        }
+        #itemList li{
+            position: relative;
+            height: 30px;
+            line-height: 20px;
+            padding: 5px;
+        }
+        li span{
+            position: absolute;
+            cursor: pointer;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>TO DO LIST</h1>
+        <form onsubmit="return false">
+            <input type="text" id="item">
+            <button id="add">추가</button>
+        </form>
+        <ul id="itemList"></ul>
+    </div>
+    <script src="./Todolist.js"></script>
+</body>
+</html>

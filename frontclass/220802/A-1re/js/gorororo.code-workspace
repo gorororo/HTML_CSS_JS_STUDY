@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\.."
+		},
+		{
+			"name": "HTML_CSS_JS_STUDY",
+			"path": "..\\..\\..\\.."
+		},
+		{
+			"name": "PYTHONSTUDY",
+			"path": "..\\..\\..\\..\\..\\PYTHONSTUDY"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\SOSSEM_ROOT"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\SOSSEM_UPLOAD"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gorororo"
+	}
+}
