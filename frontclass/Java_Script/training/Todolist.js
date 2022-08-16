@@ -49,8 +49,8 @@
         // bgColor[0].style.backgroundColor = colors[0]
         // bgColor[1].style.backgroundColor = colors[1]
         
-        for (let i = 0 ; i < colors.length; i++){
-            bgColor[i].style.backgroundColor = colors[i];
+        for (let i = 0 ; i < bgColor.length; i++){
+            bgColor[i].style.backgroundColor = colors[i%7];
             console.log(`현재 ${i}`);
             
         };

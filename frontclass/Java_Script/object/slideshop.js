@@ -1,89 +1,68 @@
-//즉시실행 함수
+//즉시 실행 함수
 (function(){
-    "use strict";
-    // const elemSpan = document.getElementsByTagName('span');
-
-    //쿼리 셀럭터
-    // const elemSpan = document.querySelectorAll('span');
-    // for(let i =0; i<elemSpan.length ; i++){
-    //     console.log(elemSpan[i].innerText)
-    // }
-    // for (let value of elemSpan){
-    //     value.style.fontWeight ='bolder';
-    // }
-    // elemSpan[0].style.fontWeight ='bolder';
-    // for (let idx in elemSpan){
-    //     console.log(idx);
-    // }
-    const tagImg = document.querySelectorAll(".small-wrap>img");
-    const tagBig = document.querySelector(".big-wrap>img");
-    const slideBtnNext = document.querySelector(".slide_btn_next");
-    console.log(slideBtnNext);
-    const slidebtnPrev = document.querySelector(".slide_btn_prev");
-    console.log(slidebtnPrev);
+    'use strict';
+    /* 객체를 가져오는 변수 */
+    const tagImg = document.querySelectorAll('.small-wrap>img');
+    const tagBig = document.querySelector('.big-wrap>img');
+    const prevBtn = document.querySelector('.big-btn>button:first-child');
+    const nextBtn = document.querySelector('.big-btn>button:last-child');
     const MAX = tagImg.length;
-    console.log(` MAX:${MAX} `);
-    let currentIdx = 0;
+    let currentIdx=0;  
 
-    //큰이미지를 변경하는 함수
-    const smallImgClick = function () {
+    const smallImgClick = function(){
         //클릭이 되면
         showBigImage(this);
-    };
-    const showBigImage = function (obj) {
-        let path = obj.getAttribute("src");
-        tagBig.setAttribute("src", path);
+    }
+    /* 큰 이미지를 변경하는 함수 */
+    const showBigImage = function(obj){
+        // console.log( this.getAttribute('src') );  //window
+        let path = obj.getAttribute('src');
+        tagBig.setAttribute('src',path);
         showImgBorder(obj);
-    };
-    const showImgBorder = function (obj) {
-        for (let elemimg of tagImg) {
-            elemimg.style.outline = "none";
+    }
+    /* 작은 이미지의 테두리를 만드는 함수 */
+    const showImgBorder = function(obj){
+        for( let elemImg of tagImg ) {
+            elemImg.style.outline = 'none';
         }
-        obj.style.outline = "2px solid blue";
-    };
+        obj.style.outline = '2px solid blue';
+    }
+    /* 초기화 정의 함수 */
+    const init = function(){
+        showBigImage(tagImg[currentIdx]);
+    }
 
-    //이벤트 등록
-
-    for (let elemimg of tagImg) {
-        elemimg.onclick = smallImgClick;
-    };
-    showImgBorder(tagImg[currentIdx]);
-    slideBtnNext.addEventListener("click", function () {
-        // console.log(slideBtnNext);
-        if (currentIdx <= 0) {
-            currentIdx = 0;
-        } else {
-            currentIdx--;
-        };
+    /* 이벤트 등록 */    
+    for( let elemImg of tagImg ) {
+        elemImg.onclick = smallImgClick;
+    }    
+    prevBtn.addEventListener('click',function(){
+        // console.log( 'prevBtn click');
+        // if( currentIdx <=0 ){
+        //     currentIdx = 0;
+        // } else{
+        //     currentIdx--;
+        // }
+        currentIdx = (currentIdx<=0) ? 0 :--currentIdx;
         // let path = tagImg[currentIdx].getAttribute('src');
         // tagBig.setAttribute('src',path);
         showBigImage(tagImg[currentIdx]);
     });
-    slidebtnPrev.addEventListener("click", function () {
-        // console.log(slideBtnNext);
-        if (currentIdx < MAX - 1) {
-            currentIdx++;
-        } else {
-            currentIdx = MAX - 1;
-        }
+    nextBtn.addEventListener('click',function(){
+        // console.log( 'nextBtn click');
+        // if( currentIdx < MAX-1 ) {
+        //     currentIdx++;
+        // }else{
+        //     currentIdx = MAX-1;
+        // }
+        currentIdx = (currentIdx<MAX-1)? ++currentIdx : MAX-1;
         // let path = tagImg[currentIdx].getAttribute('src');
-        // tagBig.setAttribute('src',path)
+        // tagBig.setAttribute('src',path);
         showBigImage(tagImg[currentIdx]);
     });
+    
+    // init();
 })();
-// function changeBigpic(){
-//     let small =this.src;
-//     console.log(this)
-//     tagBig.setAttribute('src',small);
-// };
 
-// for(let i=0; i<tagImg.length; i++ ){
-//     tagImg[i].addEventListener('click',changeBigpic);
-// };
-// tagBig.src = 'gal2.png';
-// tagBig.setAttribute('src','gal3.png');
 
-// let init=()=>{
 
-// };
-// init();
