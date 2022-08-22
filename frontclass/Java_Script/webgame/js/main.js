@@ -94,3 +94,44 @@
     // tagBtn.addEventListener('click',trueFalse);
 
 })();
+
+$(function(){
+    $('.mainmenu').mouseenter(function(){
+    // $('header nav >ul').mouseenter(function(){
+        // $('.submenu').stop().slideDown('slow')
+        $(this).find('.submenu').stop().slideDown('slow')
+    })
+    $('header nav > ul').mouseleave(function(){
+        $('.submenu').stop().slideUp('slow')
+    
+    })
+
+    $('.slide:gt(0)').hide()
+    setInterval(function(){
+        $('slide:first').fadeOut(1500).next().fadeIn(1500)
+        $('slidelist').appendTo('slide:first')
+    },3000)
+    // setInterval(() => {
+    //     $('.slidelist').animate({'marginTop':'-300px'},function(){
+    //         $('.slide:first').appendTo('.slidelist')
+    //         $('slidelist').css({'marginTop':'0px'})
+    //     })
+        
+    // }, 3000);
+    $('.tablist h3').click(function(){
+        $('.tablist h3').removeClass('on')
+        $(this).addClass('on')
+
+        let idx = (this).index()
+        $('.tabitem >*').hide().removeClass('on')
+        $('.tabitem >*').eq(idx).show().addClass('on')
+    })
+
+    $('.notice li:nth-child(1)').click(function(){
+        $('.popupbox').show()
+    })
+    $('.popupitem button').click(function(){
+        $('.popupbox').hide()
+    })
+
+})
