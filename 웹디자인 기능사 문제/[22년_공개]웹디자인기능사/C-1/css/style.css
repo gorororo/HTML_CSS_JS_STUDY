@@ -1,0 +1,197 @@
+@charset "uff-8";
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif,'맑은 고딕';color: #333;}
+ul,ol{list-style: none;}
+a{display: block;text-decoration: none;}
+img{vertical-align: top;}
+
+.wrapper{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    position: relative;
+}
+/* popupbox */
+.popupbox{
+    position: absolute;
+    width: 50%;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #333;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.popup{
+    height: 100%;
+    padding: 20px;
+    position: relative;
+}
+.popup h1{
+    margin: 10px auto;
+    text-align: center;
+}
+.popup button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+/* header */
+header{
+    width: 200px;
+    background-color: rgb(208, 222, 250);
+    padding-top: 30px;
+}
+.logo{
+    width: 200px;
+    height: 40px;
+}
+
+header nav >ul{
+    width: 180px;
+    margin: 20px auto;
+}
+
+header nav a {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.mainmenu{
+    border-bottom: 1px solid rgb(44, 114, 194);
+}
+.mainmenu:nth-child(1){
+    border-top: 1px solid rgb(44, 114, 194);
+}
+.mainmenu >a{
+    font-size: 18px;
+    font-weight: 600;
+}
+.submenu{
+    display: none;
+}
+.mainmenu:hover> a{
+    color: #fff;
+    background-color: rgb(61, 137, 224);
+}
+.submenu li:hover a{
+    color:#fff; 
+    background: rgb(139, 173, 245);
+}
+/* slide */
+.slidecontainer{
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+}
+.slide{
+    position: relative;
+}
+.slide p{
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 12px;
+    right: 0;
+    bottom: 0;
+}
+/* main */
+
+/*content  */
+.content{
+    display: flex;
+}
+.content >*{
+    height: 200px;
+}
+.on{
+    background-color: rgb(139, 173, 245);
+}
+/* tab */
+.tabmenu{
+    display: flex;
+    cursor: pointer;
+}
+.tabmenu h3{
+    padding: 10px;
+}
+.notice{
+    width: 350px;
+    
+}
+.noticelist li{
+    display: flex;
+    line-height: 2.42;
+    /* padding: 2px; */
+    margin-left: 5px;
+}
+.noticelist a{
+    width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.noticelist p{
+    margin: 0 auto;
+}
+.noticelist li:hover a{
+    text-decoration: underline;
+}
+/* gallery */
+.gallery{
+    width: 350px;
+    display: none;
+}
+.gallerylist{
+    display: flex;
+    justify-content: space-around;
+}
+.gallerylist a{
+    height: 155px;
+    padding-top: 25px;
+}
+/* banner */
+.banner{
+    position: relative;
+}
+.banner h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+}
+/* link */
+.link{
+    position: relative;
+}
+.link h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+}
+footer{
+    display: flex;
+    align-items: center;
+}
+.fwrap{
+    width: 100%;
+}
+.fmenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+.fwrap p{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

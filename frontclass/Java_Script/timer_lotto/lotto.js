@@ -1,3 +1,5 @@
+(()=>{
+    'use strict'
 //6개의 추첨번호를 추출
 let bonus = 0;
 let winresult=[];
@@ -75,3 +77,4 @@ drawBonus();
 
 init()
 
+})();

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>이벤트 핸들러2</title>
+        <style>
+            #box{
+                background-color: green;
+                height: 100vh;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <div id="result"></div>
+        <script>
+            const tagBox = document.querySelector('#box');
+            const tagResult = document.querySelector('#result')
+            const handlerClick =(e)=>{
+                console.log(e)
+                tagResult.innerHTML = `<div>screenX Y= ${e.screenX} , ${e.screenY}</div>`
+                tagResult.innerHTML += `<div>client Y= ${e.clientX} , ${e.clientY}</div>`
+                tagResult.innerHTML += `<div>page Y= ${e.pageX} , ${e.pageY}</div>`
+                tagResult.innerHTML += `<div>offset Y= ${e.offsetX} , ${e.offsetY}</div>`
+            }
+            tagBox.addEventListener('click',handlerClick)
+        </script>
+    </body>
+</html>

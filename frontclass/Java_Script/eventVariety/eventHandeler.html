@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 드래그</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid orange;
+            cursor: pointer;
+            position: absolute;
+            /* transform: translate(-50%,-50%); */
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const tagBox=document.querySelector('#box');
+
+        const handlerMouseMove= (e)=>{
+            // console.log(`clientX=${e.clientX} , clientY=${e.clientY} `)
+            tagBox.style.top = e.clientY+'px';
+            tagBox.style.left = e.clientX+'px';
+            // tagBox.style.transform = `translate(-50%,-50%)`
+        }
+
+        const handlerMouseDown=(e)=>{
+            console.log(`mouseDown`)
+            document.addEventListener('mousemove',handlerMouseMove)
+            tagBox.style.transform = `translate(-${e.offsetX}px,-${e.offsetY}px)`
+        }
+        const handlerMouseUp=(e)=>{
+            console.log(`mouseUp`)
+            document.removeEventListener('mousemove',handlerMouseMove)
+        }
+
+        const handlerContextmenu=(e)=>{
+            console.log('mouse Right click');
+            e.preventDefault();
+            return false;
+            // alert('우클릭');
+        }
+
+        tagBox.addEventListener('mousedown',handlerMouseDown)
+        document.addEventListener('mouseup',handlerMouseUp)
+        document.addEventListener('contextmenu',handlerContextmenu)
+
+    </script>
+</body>
+</html>
