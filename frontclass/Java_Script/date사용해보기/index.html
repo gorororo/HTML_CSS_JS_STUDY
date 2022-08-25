@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>date 사용해보기</title>
+        <style>
+            *{margin: 0;padding: 0;box-sizing: border-box;}
+            .wrapper{
+                width: 500px;
+                margin: 30px auto;
+                border: 1px solid #333;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px #222;
+                text-align: center;
+                font-weight: bolder;
+            }
+            .wrapper > .day1{
+                margin: 30px;
+                font-weight: 600;
+            }
+            .wrapper > .day1 > .pass{
+                margin: 20px;
+                font-size: 3rem;
+                
+            }
+            .wrapper > .bar{
+                background-color: #333;
+                color: #fff;
+                height: 50px;
+                line-height: 50px;
+                text-align: left;
+                padding-left: 30px;
+            }
+            .day2 >div{
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                margin: 20px auto;
+                font-size: 2rem;
+                border-top: 1px solid #333;
+            }
+
+            .day2 >div{
+                border-bottom: 1px solid #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="day1">
+                <p>프론트엔드 개발자 과정</p>
+                <p class="pass">몇일</p>
+            </div>
+            <div class="bar">기념일 계산</div>
+            <div class="day2">
+                <!-- <div>
+                    <p>100일</p>
+                    <p>2022-08-25일</p>
+                </div> -->
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
