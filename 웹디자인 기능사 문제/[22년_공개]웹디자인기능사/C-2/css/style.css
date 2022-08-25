@@ -1,0 +1,158 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif,'맑은 고딕'; color: #333;}
+ol,ul{
+    list-style: none;
+}
+a{text-decoration: none; display: block;}
+img{vertical-align: top;}
+.wrapper{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    position: relative;
+}
+/* header */
+
+header{
+    width: 200px;
+    height: 650px;
+    background-color: lightgoldenrodyellow;
+}
+.logo{
+    width: 200px;
+    height: 40px;
+    padding-top:20px;
+}
+header nav >ul{
+    width: 180px;
+    margin: 20px auto;
+    margin-top: 50px;
+}
+.mainmenu{
+    width: 100%; 
+    border-top: 1px solid rgb(172, 134, 31);
+}
+.mainmenu:nth-child(1){
+    border-bottom: 1px solid rgb(172, 134, 31);
+}
+.mainmenu a{
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+.mainmenu >a{
+    font-weight: 600;
+    font-size: 18px;
+}
+.submenu{
+    width: 100%;
+    display: none;
+}
+.mainmenu:hover >a{
+    background-color: rgb(165, 123, 7);
+    color: #fff;
+}
+.submenu li:hover a{
+    background-color: rgb(161, 137, 70);
+    color: #fff;
+}
+/* main */
+main{
+    width: 800px;
+}
+/* slide */
+.slidecontainer{
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.slide{
+    position: absolute;
+}
+.slide p{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 12px;
+}
+/* content */
+.content{
+    display: flex;
+    width: 800px;
+    height: 200px
+}
+.content >*{
+    width: 250px;
+    height: 200px;
+}
+.notice{
+    width: 300px;
+    background-color: bisque;
+}
+.notice h3{
+    padding: 10px;
+}
+.noticelist li{
+    display: flex;
+    line-height: 2.5;
+}
+.noticelist li a{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 65%;
+    margin-left: 10px;
+}
+/* gallery */
+.gallery{
+    background-color: bisque;
+}
+.gallerylist{
+    margin: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gallerylist img{
+    width: 75px;
+}
+/* link */
+.link{
+    position: relative;
+    overflow: hidden;
+}
+.link h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+}
+/* foooter */
+footer{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+footer p{
+    width: 80%;
+}
+.fwrap{
+    width: 20%;
+}
+.sns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+.family{
+    height:50px;
+}
