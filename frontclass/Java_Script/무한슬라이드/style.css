@@ -1,0 +1,63 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;font-family: sans-serif,'맑은 고딕';text-align: center;}
+a{text-decoration: none;display: block;}
+img{vertical-align: top;}
+ol,ul{list-style: none;}
+#wrapper{
+    position: relative;
+    width: 600px;
+    margin: 50px auto;
+}
+.slidecontainer{
+    width: 300px;
+    height: 300px;
+    margin: 25px auto;
+    overflow: hidden;
+    position: relative;
+}
+.slidelist{
+    display: flex;
+    transform: translateX(-300px);
+}
+.slidelist img{
+    display: block;
+    width: 300px;
+}
+.slideBtn button{
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 100%;
+    border-radius: 50%;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+}
+.slideBtn > .prev{
+    left: 50px;
+    
+}
+.slideBtn > .next{
+    right: 50px;
+    
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.active{
+    background-color: #111 !important; 
+}
+.circle > .dot{
+    width: 20px;
+    height: 20px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
