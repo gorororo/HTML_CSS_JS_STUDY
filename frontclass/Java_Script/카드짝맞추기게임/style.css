@@ -17,7 +17,10 @@ body{
     width: 100px;
     height: 150px;
     position: relative;
-    margin: 10px;
+    margin: 12px;
+    transform: perspective(500px) rotateY(0deg);
+    backface-visibility: hidden;
+    transition: 1s;
 }
 .card > div{
     position: absolute;
@@ -28,5 +31,9 @@ body{
     border-radius: 0.5em;
 }
 .card > .card-front{
-    z-index: 1;
+    transform: rotateY(180deg);
 }
+.open{
+    transform: rotateY(180deg);
+}
+

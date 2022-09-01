@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    /* font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
+    font-family: 'Roboto', sans-serif; */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+}
+.wrapper{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+main > section{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+section.box1 > p:nth-child(1){
+    grid-column: 1/ span 2;
+    font-size: 50px;
+    background-color: #333;
+}
+section.box1 > p:nth-child(2){
+    background: url(../images/m1.jpg) no-repeat right center;
+    background-size: cover;
+}
+section.box1 > p:nth-child(3){
+    background-color: #555;
+}
+section.box1 > p:nth-child(4){
+    background-color: #777;
+}
+section.box1 > p:nth-child(5){
+    background: url(../images/m3.jpg) no-repeat ;
+    background-size: contain;
+}
+section.box1 > p:nth-child(6){
+    grid-column: 3/ span 2;
+    grid-row: 2 /span 2;
+    background: url(../images/m2.jpg) no-repeat;
+}
+section.box1 > p:nth-child(7){
+    background: url(../images/m4.jpg) no-repeat center;
+    background-size: cover;
+}
+section.box1 > p:nth-child(8){
+    background-color: #444;
+}
+section.box1 > p:nth-child(9){
+    background-color: #555;
+}
+section.box1 > p:nth-child(10){
+    background: url(../images/m5.jpg) no-repeat center;
+    background-size: cover;
+    grid-column: 2/ span 2;
+}
+section.box1 > p:nth-child(11){
+    background-color: #222;
+}
+/* box2 */
+section.box2 > p:nth-child(1){
+    background-color: #444;
+}
+section.box2 > p:nth-child(2){
+    background: url(../images/w1.jpg) no-repeat center ;
+    background-size: cover;
+}
+section.box2 > p:nth-child(3){
+    grid-column: 3/ span 2;
+    background-color: #333;
+    font-size: 50px;
+}
+section.box2 > p:nth-child(4){
+    background: url(../images/w2.jpg) no-repeat ;
+    grid-row: 2 / span 2;
+    background-size: cover;
+}
+section.box2 > p:nth-child(5){
+    grid-row: 2/ span 2;
+    grid-column: 2 /span 2;
+    background: url(../images/w3.jpg) no-repeat center;
+    background-size: cover;
+}
+section.box2 > p:nth-child(6){
+    background: url(../images/w4.jpg) no-repeat center;
+    background-size: contain;
+}
+section.box2 > p:nth-child(7){
+    background-color: #888;
+
+}
+section.box2 > p:nth-child(8){
+    background: url(../images/w5.jpg) no-repeat center ;
+    background-size: cover; 
+}
+section.box2 > p:nth-child(9){
+    background-color: #888;
+}
+section.box2 > p:nth-child(10){
+    background: url(../images/w6.jpg) no-repeat top;
+    background-size: cover;
+}
+section.box2 > p:nth-child(11){
+    background: url(../images/w7.jpg) no-repeat 15%;
+    background-size: cover;
+}
+/* box3 */
+section.box3 > p:nth-child(1){
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+    background: url(../images/k1.jpg)no-repeat ;
+    background-size: cover;
+}
+section.box3 > p:nth-child(2){
+    background-color: #444;
+}
+section.box3 > p:nth-child(3){
+    background: url(../images/k2.jpg) no-repeat center;
+    background-size: cover;
+}
+section.box3 > p:nth-child(4){
+    background-color: #222;
+    grid-column: 3/ span 2;
+    font-size: 50px;
+}
+section.box3 > p:nth-child(5){
+    background: url(../images/k3.jpg) no-repeat ;
+    background-size: cover;
+    grid-row: 3/ span 2;
+}
+section.box3 > p:nth-child(6){
+    background-color: #888;
+}
+section.box3 > p:nth-child(7){
+    background: url(../images/k4.jpg) no-repeat center;
+    background-size: cover;
+}
