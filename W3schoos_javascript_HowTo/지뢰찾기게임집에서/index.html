@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지뢰찾기 게임</title>
+        <style>
+            table{
+                border-collapse: collapse;
+                margin: 50px auto;
+            }
+            td{
+                border: 1px solid #bbb;
+                text-align: center;
+                line-height: 30px;
+                width: 30px;
+                height: 30px;
+                background: #888;
+            }
+            td.opened{background: #fff;}
+            td.flag{background: rgb(180, 109, 123);}
+            td.question{background: orange;}
+        </style>
+    </head>
+    <body>
+        <form id="form" style="text-align: center;margin-top: 20px;">
+            <input  placeholder="가로 줄" id="row" size="5">
+            <input  placeholder="세로 줄" id="cell" size="5">
+            <input  placeholder="지뢰" id="mine" size="5">
+            <button>생성</button>
+        </form>
+        <div id="timer" style="text-align: center;"></div>
+        <table id="table">
+            <tbody></tbody>
+        </table>
+        <div id="result"></div>
+        <script src="./script.js"></script>
+    </body>
+</html>

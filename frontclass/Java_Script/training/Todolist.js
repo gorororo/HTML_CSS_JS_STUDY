@@ -15,9 +15,8 @@
             itemList.push(value);
         };
         showList();
-        bgcolorChange();
-        
     };
+
     function showList(){
         let strTag='';
         for(let i=0 ; i<itemList.length; i++){
@@ -27,6 +26,18 @@
             strTag += '</li>';
         }
         tagUl.innerHTML = strTag;
+        let bgColor = document.querySelectorAll('.close');
+        const colors = ['lightgreen','lightblue','lightyellow','#1abc9c','#2ecc71','#9b59b6','#34495e']
+        
+        // console.log(Idx);
+        // bgColor[0].style.backgroundColor = colors[0]
+        // bgColor[1].style.backgroundColor = colors[1]
+        
+        for (let i = 0 ; i < bgColor.length; i++){
+            bgColor[i].style.backgroundColor = colors[i%bgColor.length];
+            console.log(`현재 ${i}`);
+            
+        };
         clickRemove();
         
     };
@@ -41,18 +52,4 @@
         itemList.splice(idx,1);
         showList();
     }
-    function bgcolorChange(){
-        let bgColor = document.querySelectorAll('.close');
-        const colors = ['lightgreen','lightblue','lightyellow','#1abc9c','#2ecc71','#9b59b6','#34495e']
-        
-        // console.log(Idx);
-        // bgColor[0].style.backgroundColor = colors[0]
-        // bgColor[1].style.backgroundColor = colors[1]
-        
-        for (let i = 0 ; i < bgColor.length; i++){
-            bgColor[i].style.backgroundColor = colors[i%7];
-            console.log(`현재 ${i}`);
-            
-        };
-    };
 })();
