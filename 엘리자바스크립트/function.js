@@ -1,3 +1,4 @@
+'use strict'
 // Function
 // - fundamental building block in the program
 // - subprogram can be used multiple times
@@ -9,7 +10,6 @@
 // naming: doSomething, command, verb
 // e.g. createCardAndPoint -> createCard, createPoint
 // function is object in Js
-
 function printHello(){
     console.log('hello');
 }
