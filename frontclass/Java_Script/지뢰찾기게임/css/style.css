@@ -16,4 +16,9 @@
     text-align: center;
     line-height: 30px;
     border: 1px solid #bbb;
+    width: 30px;
+    height: 30px;
+}
+.mine > div.show{
+    background-color: #fff;
 }
