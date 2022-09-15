@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스크롤 예제</title>
+        <style>
+            body{
+                height: 2000px;
+                background-color: #aaa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                
+            }
+            #fixed{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #222;
+                color: #fff;
+            }
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: crimson;
+                /* position: absolute; */
+                /* transform: scale(1.5); */
+                transition: 1s;
+            }
+            #box.zoomin{
+                transform: scale(2);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fixed">0</div>
+        <div id="box"></div>
+        <script>
+            //얼마나 스크롤이 되었는지를 픽셀 단위로 반환
+            const tagFixed = document.querySelector('#fixed');
+            const tagBox = document.querySelector('#box');
+            const handlerScroll = (e)=>{
+                // console.log(`scroll event`)
+                console.log(window.scrollY);
+                const tagBox = document.querySelector('#box');
+                // tagBox.style.transform = 'scale(1.5)';
+                // tagFixed.textContent = tagBox.offsetTop;
+                // tagFixed.textContent = window.scrollY;
+                tagFixed.textContent = tagBox.getBoundingClientRect().top;
+                let box_offsetY = tagBox.getBoundingClientRect().top;
+                if(box_offsetY < 10){
+                    tagBox.classList.add('zoomin');
+                }else{
+                    tagBox.classList.remove('zoomin');
+                }
+                
+            }
+            window.addEventListener('scroll',handlerScroll);
+            console.log(window.innerHeight);
+        </script>
+    </body>
+</html>

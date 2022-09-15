@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>scllor Processing</title>
+    </head>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            height: 2000px;
+        }
+        .top{
+            background-color: #888;
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+        }
+        nav{
+            display: flex;
+            background-color: #555;
+            color: #fff;
+            width: 100%;
+            /* transition: 0.5s; */
+
+        }
+        nav div{
+            padding: 20px;
+        }
+        nav div:nth-child(1){
+            background-color: green;
+        }
+        .fixed{
+            position: fixed;
+            top: -61px;
+            left: 0;
+            transition: top 0.5s;
+        }
+        .fixedDown{
+            top: 0px;
+        }
+    </style>
+    <body>
+        <nav class="fixed">
+            <div class="home">Home</div>
+            <div class="news">News</div>
+            <div class="contact">Contact</div>
+        </nav>
+        <div class="top">
+            <h1>Scroll Down</h1>
+            <h3>scroll down to see the sticky effect.</h3>
+        </div>
+        <div class="contant">
+            <h1>Scroll effect</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Molestias hic nisi earum. Voluptates impedit soluta sint
+                quibusdam eaque atque dicta! Ducimus suscipit voluptatem iste
+                porro dolores voluptates incidunt quasi praesentium.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Molestias hic nisi earum. Voluptates impedit soluta sint
+                quibusdam eaque atque dicta! Ducimus suscipit voluptatem iste
+                porro dolores voluptates incidunt quasi praesentium.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Molestias hic nisi earum. Voluptates impedit soluta sint
+                quibusdam eaque atque dicta! Ducimus suscipit voluptatem iste
+                porro dolores voluptates incidunt quasi praesentium.
+            </p>
+        </div>
+        <script>
+            const tagNav = document.querySelector('nav');
+            const navHeight= tagNav.clientHeight;
+            console.log(tagNav.offsetTop);
+            const handlerScroll = ()=>{
+                if(window.scrollY > navHeight){
+                    tagNav.classList.add('fixed');
+                    tagNav.classList.add('fixedDown');
+                    // console.log(window.pageYOffset);
+                }
+                else if(window.scrollY < navHeight){
+                    console.log('2'+tagNav.offsetTop);
+                    console.log('remove');
+                    tagNav.classList.remove('fixedDown');
+                }
+            }
+
+            window.addEventListener('scroll',handlerScroll);
+        </script>
+    </body>
+</html>

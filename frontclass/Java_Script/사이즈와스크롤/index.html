@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>요소의 사이즈와 스크롤</title>
+        <style>
+            /* *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            } */
+            #exam{
+                width: 300px;
+                height: 200px;
+                border: 25px solid blue;
+                padding: 20px;
+                /* border-radius: 5px; */
+                overflow: auto;
+                position: absolute;
+                top: 180px;
+                left: 180px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="exam">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quam illo sit perferendis, doloribus voluptas in placeat, praesentium aliquam modi quas doloremque? Quaerat blanditiis inventore molestias a harum assumenda laborum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id asperiores accusantium, corrupti perferendis rem labore incidunt voluptas. Temporibus et minima suscipit deleniti perferendis iusto, delectus at asperiores eveniet sapiente repellendus!
+        </div>
+        <script>
+            const tagExample = document.querySelector('#exam'); 
+            console.log(`clientWidth : ${tagExample.clientWidth}`);
+            console.log(`clientHeight : ${tagExample.clientHeight}`);
+            console.log(`offsetWidth : ${tagExample.offsetWidth}`);
+            console.log(`offsetHeight : ${tagExample.offsetHeight}`);
+            console.log(tagExample.offsetWidth-tagExample.clientWidth );
+            console.log(tagExample.offsetHeight-tagExample.clientHeight);
+            console.log(`offsetLeft : ${tagExample.offsetLeft}`)
+            console.log(`offsetTop : ${tagExample.offsetTop}`)
+
+            //window.innerWidth, window.innerHeight , outterWidth , outterHeight
+            //scrollWidth, scrollHeight
+        </script>
+    </body>
+</html>
