@@ -54,11 +54,11 @@ fruits.shift();
 fruits.shift();
 console.log(fruits);
 
-console.clear();
 // note ! shift, unshift are slower than pop ,push
 // remove an item by index postion
 fruits.push('🍓','🍑');
 console.log(fruits);
+
 
 fruits.splice(1,1);
 console.log(fruits);
@@ -71,7 +71,6 @@ console.log(newFruits);
 
 // 5. Searching
 // indexOf : find the index
-console.clear();
 console.log(fruits);
 console.log(fruits.indexOf('🍓'));
 console.log(fruits.indexOf('🍎'));
@@ -82,8 +81,17 @@ console.log(fruits.includes('🍉'));
 console.log(fruits.includes('🍊'));
 
 // lastIndexOf
-console.clear();
 fruits.push('🍎');
 console.log(fruits);
 console.log(fruits.indexOf('🍎'));
 console.log(fruits.lastIndexOf('🍎'));
+console.clear();
+// es6 
+// values()
+const fruitValue = fruits.values();
+for(const value of fruitValue){
+    console.log('value :'+ value);
+}
+// at() index access
+console.log(fruits.at(1));
+console.log(fruits.at(-3));
