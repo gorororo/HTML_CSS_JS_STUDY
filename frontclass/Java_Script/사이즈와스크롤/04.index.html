@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스크롤 백분율 구하기</title>
+        <link rel="stylesheet" href="./reset.css">
+        <style>
+            h1{
+                text-align: center;
+                padding: 30px;
+                width: 100%;
+                height: 100px;
+                background-color: #fff;
+                position: fixed;
+            }
+            #scroll-bar{
+                width: 0%;
+                height: 30px;
+                background-color: blue;
+                border: 10px solid #fff;
+                position: fixed;
+                top: 103px;
+                transition: 0.5s;
+            }
+            #contents{
+                width: 100%;
+                height: 1000vh;
+                background-color: yellowgreen;
+                padding-top: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>스크롤 백분율 구하기</h1>
+        <div id="scroll-bar"></div>
+        <div id="contents">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
+                vitae possimus, tempore laborum similique sed quam quisquam,
+                ratione ipsum odit dicta earum repudiandae consequatur. Quo
+                veniam praesentium eaque. Voluptatum, ducimus.
+            </p>
+        </div>
+        <script defer src="./04.index.js"></script>
+    </body>
+</html>

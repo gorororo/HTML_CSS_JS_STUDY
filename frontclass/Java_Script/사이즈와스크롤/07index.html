@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./reset.css">
+        <style>
+            header{
+                width: 100vw;
+                height: 800px;
+                background-color: skyblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            main section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 55px auto;
+                width: 100%;
+            }
+            section div{
+                width: 15%;
+                height: 250px;
+                text-align: center;
+                line-height: 210px;
+                padding: 20px;
+                background-color: yellow;
+                margin: 200px auto ;
+                box-shadow: 5px 5px 5px #888;
+                transition: 1s;
+                opacity: 0;
+                font-size: 1.5rem;
+            }
+            .box-up{
+                transform: translateY(220px);
+            }
+            .box-down{
+                transform: translateY(-220px);
+            }
+            .box-right{
+                transform: translateX(-220px);
+            }
+            .box-left{
+                transform: translateX(220px);
+            }
+            .box-rotateR{
+                transform: rotate(180deg);
+            }
+            .box-rotateL{
+                transform: rotate(-180deg);
+            }
+            .box-scaleE{
+                transform: scale(0.5);
+            }
+            .box-scaleR{
+                transform: scale(1.5);
+            }
+            .show{
+                opacity: 1;
+                transform: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>아래로👇 <br> 스크롤 하세요</h1>
+        </header>
+        <main>
+            <section>
+                <div class="box1 box-up">BOX-1</div>
+                <div class="box2 box-up">BOX-2</div>
+                <div class="box3 box-up">BOX-3</div>
+                <div class="box4 box-up">BOX-4</div>
+            </section>
+            <section>
+                <div class="box5 box-down">BOX-5</div>
+                <div class="box6 box-up">BOX-6</div>
+                <div class="box7 box-right">BOX-7</div>
+                <div class="box8 box-left">BOX-8</div>
+            </section>
+            <section>
+                <div class="box9 box-rotateR">BOX-9</div>
+                <div class="box10 box-rotateL">BOX-10</div>
+                <div class="box11 box-scaleL">BOX-11</div>
+                <div class="box12 box-scaleR">BOX-12</div>
+            </section>
+        </main>
+        <script defer src="./07index.js"></script>
+    </body>
+</html>

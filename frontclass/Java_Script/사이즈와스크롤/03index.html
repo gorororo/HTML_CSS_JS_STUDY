@@ -33,20 +33,24 @@
         }
         .fixed{
             position: fixed;
+            top: 0;
             left: 0;
             transition: top 0.5s;
         }
+        .fixedDown{
+            top: 0px;
+        }
     </style>
     <body>
-        <nav class="fixed">
-            <div class="home">Home</div>
-            <div class="news">News</div>
-            <div class="contact">Contact</div>
-        </nav>
         <div class="top">
             <h1>Scroll Down</h1>
             <h3>scroll down to see the sticky effect.</h3>
         </div>
+        <nav class="">
+            <div class="home">Home</div>
+            <div class="news">News</div>
+            <div class="contact">Contact</div>
+        </nav>
         <div class="contant">
             <h1>Scroll effect</h1>
             <p>
@@ -71,16 +75,15 @@
         <script>
             const tagNav = document.querySelector('nav');
             const navHeight= tagNav.clientHeight;
-            tagNav.style.top=`-${navHeight}px`
             console.log(tagNav.offsetTop);
             const handlerScroll = ()=>{
-                if(window.scrollY || window.pageYOffset > navHeight){
-                    tagNav.style.top=`${navHeight-navHeight}px`
+                if(window.scrollY > navHeight){
+                    tagNav.classList.add('fixed');
                     // console.log(window.pageYOffset);
                 }
-                else if(window.scrollY || window.pageYOffset < navHeight){
+                else if(window.scrollY < navHeight){
                     console.log('remove');
-                    tagNav.style.top=`-${navHeight}px`
+                    tagNav.classList.remove('fixed');
                 }
             };
 
