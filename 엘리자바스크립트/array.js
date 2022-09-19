@@ -33,7 +33,7 @@ for(let fruit of fruits){
 
 // d. for in
 for(let fruit1 in fruits){
-    console.log(fruits[fruit1]);;
+    console.log(fruits[fruit1]);
 }
 
 // 4. Addtion, deletion , copy
