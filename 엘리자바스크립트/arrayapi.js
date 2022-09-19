@@ -94,6 +94,9 @@ const students = [
 // Bonus! do Q10 sorted in ascending order 위에만든 어레이를 오름차순으로 정렬하기
 // result should be: '45, 66, 80, 88, 90'
 {
-    const result = students.map((student)=> student.score).sort((a,b)=>a-b).join();
+    const result = students
+    .map((student)=> student.score)
+    .sort((a,b)=>a-b)
+    .join();
     console.log(result);
 }

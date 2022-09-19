@@ -5,6 +5,7 @@ const MAX_MARGEN = 300;
 const handlerScroll = () => {
     tagSection.forEach((elem) => {
         const boxTop = elem.getBoundingClientRect().top;
+        // console.dir(elem.parentNode.children[2].children[0].getBoundingClientRect().top);
         if (window.innerHeight > boxTop + MAX_MARGEN) {
             elem.childNodes.forEach(v => v.className = "show");
         }
