@@ -1,0 +1,41 @@
+@charset "utf-8";
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(231, 199, 140);
+}
+nav ul{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    transition: 0.2s;
+}
+main section{
+    width: 100vw;
+    height: 100vh;
+    font-size: 10rem;
+    text-align: center;
+    line-height: 100vh;
+}
+section:nth-child(1){
+    background-color: darkcyan;
+}
+section:nth-child(2){
+    background-color: darkgoldenrod;
+}
+section:nth-child(3){
+    background-color: darkgreen;
+}
+section:nth-child(4){
+    background-color: darkorange;
+}
+section:nth-child(5){
+    background-color: darkgrey;
+}
+.select{
+    transform: scale(1.5);
+    color: crimson;
+}
