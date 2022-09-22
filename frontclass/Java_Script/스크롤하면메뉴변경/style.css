@@ -3,6 +3,9 @@ nav{
     position: fixed;
     width: 100%;
     background-color: rgb(231, 199, 140);
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 nav ul{
     display: flex;
@@ -12,6 +15,7 @@ nav ul{
 }
 nav ul li{
     transition: 0.2s;
+    cursor: pointer;
 }
 main section{
     width: 100vw;
@@ -36,6 +40,10 @@ section:nth-child(5){
     background-color: darkgrey;
 }
 .select{
-    transform: scale(1.5);
+    transform: scale(1.2);
     color: crimson;
+}
+.scale{
+    font-size: 15rem;
+    transition: 1s;
 }

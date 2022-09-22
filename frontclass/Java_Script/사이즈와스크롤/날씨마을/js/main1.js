@@ -29,8 +29,6 @@ const changeBackground = (percent)=>{
         setTownBackground(0);
         setSunRotate(-30);
         tagSun.classList.add('active');
-
-
     }else if (percent >= 50 && percent <75){
         setBackground(2);
         setTownBackground(1);
