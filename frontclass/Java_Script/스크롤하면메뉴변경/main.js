@@ -1,29 +1,21 @@
 const tagMenulist = document.querySelectorAll('nav ul li');
 const tagSectionlist = document.querySelectorAll('section');
-const tagPlist = document.querySelectorAll('ul li p');
-const tagPl=[...tagPlist];
 const tagMenu = [...tagMenulist];
 const tagSection = [...tagSectionlist];
 const sectionOffsetTop =[];
+const tagSectionpos = tagSectionlist.length*100/tagSectionlist.length/tagSectionlist.length;
 
 tagSection.forEach(v=>sectionOffsetTop.push(v.offsetTop));
 
-const addTagMenu = (index)=>{
-    tagMenu.forEach((v)=>{v.classList.remove('select')})
-    tagMenu[index].classList.add('select');
-}
-
-const addTagSection = (index)=>{
-    tagSection.forEach((v)=>{v.classList.remove('scale')})
-    tagSection[index].classList.add('scale');
+const addAndRemoveTag = (array,index,text)=>{
+    array.forEach((v)=>{v.classList.remove(text)})
+    array[index].classList.add(text);
 }
 
 const handlerClick = ()=>{
-    console.log(sectionOffsetTop);
     tagMenu.forEach((elem,index)=>{
         elem.onclick = (v)=>{
             if(v.currentTarget===elem){
-                v.currentTarget.classList.add('select');
                 window.scrollTo(0,sectionOffsetTop[index]);
             }
         };
@@ -36,25 +28,28 @@ const handlerScroll = ()=>{
     const screenY = document.scrollingElement.scrollTop;
     const maxScroll = totalHeight-clientHeight;
     const percent = (screenY/maxScroll)*100;
-    console.log(`scrollHeight : ${totalHeight}`)
-    console.log(`clientHeight : ${clientHeight}`)
-    console.log(`scrollTop : ${screenY}`)
-    for(let i=0; i<=tagMenu.length; i=20){
-        if(percent < 20){
-            addTagMenu(0);
-            addTagSection(0);
-        }else if (percent <= 40){
-            addTagMenu(1);
-            addTagSection(1);
-        }else if (percent <= 60){
-            addTagMenu(2);
-            addTagSection(2);
-        }else if (percent <= 80){
-            addTagMenu(3);
-            addTagSection(3);
-        }else if (percent <= 100){
-            addTagMenu(4);
-            addTagSection(4);
+    // console.log(`scrollHeight : ${totalHeight}`)
+    // console.log(`clientHeight : ${clientHeight}`)
+    // console.log(`scrollTop : ${screenY}`)
+    // console.log(`percent : ${percent}`)
+    for(let i=0; i<=tagMenu.length; i=tagSectionpos){
+        console.log(i)
+        if(percent < tagSectionpos){
+            addAndRemoveTag(tagMenu,0,'select');
+            addAndRemoveTag(tagSection,0,'scale')
+            tagSectionpos+tagSectionpos
+        }else if (percent <= tagSectionpos*2){
+            addAndRemoveTag(tagMenu,1,'select');
+            addAndRemoveTag(tagSection,1,'scale')
+        }else if (percent <= tagSectionpos*3){
+            addAndRemoveTag(tagMenu,2,'select');
+            addAndRemoveTag(tagSection,2,'scale')
+        }else if (percent <= tagSectionpos*4){
+            addAndRemoveTag(tagMenu,3,'select');
+            addAndRemoveTag(tagSection,3,'scale')
+        }else if (percent <= tagSectionpos*5){
+            addAndRemoveTag(tagMenu,4,'select');
+            addAndRemoveTag(tagSection,4,'scale')
         }
     }
 };
