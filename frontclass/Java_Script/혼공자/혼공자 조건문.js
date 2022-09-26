@@ -137,3 +137,41 @@ let result;
             break
         }
 console.log(`${year}년에 태어났다면 ${result}띠 입니다.`)
+
+const rowInput = 2022;
+const years = Number(rowInput);
+
+let result1 
+const e1 = years % 12;
+if      (e === 0)   {result1 = "신"} 
+else if (e1 === 1)  {result1 = "유"} 
+else if (e1 === 2)  {result1 = "술"} 
+else if (e1 === 3)  {result1 = "해"} 
+else if (e1 === 4)  {result1 = "자"} 
+else if (e1 === 5)  {result1 = "축"} 
+else if (e1 === 6)  {result1 = "인"} 
+else if (e1 === 7)  {result1 = "묘"} 
+else if (e1 === 8)  {result1 = "진"} 
+else if (e1 === 9)  {result1 = "사"} 
+else if (e1 === 10) {result1 = "오"} 
+else if (e1 === 11) {result1 = "미"}
+
+let result2
+const e2 = years % 10
+if      (e2 === 0)  {result2 = "경"} 
+else if (e2 === 1)  {result2 = "신"} 
+else if (e2 === 2)  {result2 = "임"} 
+else if (e2 === 3)  {result2 = "계"} 
+else if (e2 === 4)  {result2 = "갑"} 
+else if (e2 === 5)  {result2 = "을"} 
+else if (e2 === 6)  {result2 = "병"} 
+else if (e2 === 7)  {result2 = "정"} 
+else if (e2 === 8)  {result2 = "무"} 
+else if (e2 === 9)  {result2 = "기"} 
+
+console.log(`${year}년에 태어났다면 ${result1+result2}띠 입니다.`)
+
+true ? console.log('A1') : console.log('B1');
+false ? console.log('B2') : console.log('A2');
+true || console.log('A3');
+true && console.log('A4');
