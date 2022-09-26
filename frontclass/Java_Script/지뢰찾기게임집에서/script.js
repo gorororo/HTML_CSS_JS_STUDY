@@ -72,6 +72,7 @@ function onRightClick(event) {
     event.preventDefault();
     const target = event.target;
     const rowIndex = target.parentNode.rowIndex;
+    console.dir(target.parentNode);
     const cellIndex = target.cellIndex;
     const cellData = data[rowIndex][cellIndex];
     if (cellData === CODE.MINE) {

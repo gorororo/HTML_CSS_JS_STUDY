@@ -15,10 +15,8 @@ const addAndRemoveTag = (array,index,text)=>{
 const handlerClick = ()=>{
     tagMenu.forEach((elem,index)=>{
         elem.onclick = (v)=>{
-            if(v.currentTarget===elem){
-                window.scrollTo(0,sectionOffsetTop[index]);
-            }
-        };
+            v.currentTarget===elem ? window.scrollTo(0,sectionOffsetTop[index]) : undefined ;
+        }
     });
 };
 
@@ -32,7 +30,7 @@ const handlerScroll = ()=>{
     // console.log(`clientHeight : ${clientHeight}`)
     // console.log(`scrollTop : ${screenY}`)
     // console.log(`percent : ${percent}`)
-    for(let i=0; i<=tagMenu.length; i=tagSectionpos){
+    for(let i=0; i<=tagMenu.length; i++){
         console.log(i)
         if(percent < tagSectionpos){
             addAndRemoveTag(tagMenu,0,'select');
@@ -50,6 +48,9 @@ const handlerScroll = ()=>{
         }else if (percent <= tagSectionpos*5){
             addAndRemoveTag(tagMenu,4,'select');
             addAndRemoveTag(tagSection,4,'scale')
+        }else if (percent <= tagSectionpos*6){
+            addAndRemoveTag(tagMenu,5,'select');
+            addAndRemoveTag(tagSection,5,'scale')
         }
     }
 };
