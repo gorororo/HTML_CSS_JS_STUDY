@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const form = document.querySelector('form')
+            form.addEventListener('submit',(e)=>{
+                const text  = document.querySelector('input[type=text]')
+                text.value.indexOf('@')>=0 ? alert('정상적') : alert('비정상'), e.preventDefault();
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="">  <!-- onsubmit = "return false"-->>
+        <!-- 이메일 형식을 입력해주세요 -->
+        이메일 형식을 입력해주세요<br>
+        <input type="text" name="test" id="">
+        <input type="submit" value="글자" >
+        <button type="button">제출</button>  <!--타입을 버튼으로 정해줘야 submit 하지 않는다 아무 타입도 적어주지 않으면 기본이 submit-->>
+    </form>
+
+</body>
+</html>

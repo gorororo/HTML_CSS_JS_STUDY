@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const buttonA = document.querySelector('button');
+            const buttonB = document.querySelector('input[type=button]');
+            buttonA.addEventListener('click',(e)=>{
+                e.currentTarget.textContent += '글자';
+            })
+            buttonB.addEventListener('click',(e)=>{
+                e.currentTarget.value += '글자';
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- click 이벤트 -->
+    <button >글자</button>
+    <input type="button" value="글자">
+    <!-- submit 이벤트![click 이벤트도 가능하지만....] -->
+    <form action="">
+        <input type="submit" value="글자">
+    </form>
+</body>
+</html>

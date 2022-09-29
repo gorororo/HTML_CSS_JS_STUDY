@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            //태그 선택자
+            document.querySelector('h1').style.color = 'red';
+            //아이디 선택자
+            document.querySelector('#header').style.backgroundColor = 'orange'
+            //클래스 선택자
+            document.querySelector('.center.head').style.textAlign = 'center'
+            //속성 선택자
+            document.querySelector('[type=text]').style.borderRadius = '10px'
+            //후손 선택자
+            document.querySelector('body input').style.backgroundColor = 'blue';
+
+            for (const elem of document.querySelectorAll('input')){
+                elem.style.backgroundColor = 'red';
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1 id="header" class="center head">안녕하세요!</h1>
+    <input type="text">
+    <input type="text">
+</body>
+</html>
