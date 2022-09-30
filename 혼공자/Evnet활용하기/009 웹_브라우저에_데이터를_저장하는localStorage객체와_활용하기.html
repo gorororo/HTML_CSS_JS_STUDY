@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const p = document.querySelector('p');
+            const input = document.querySelector('input');
+            const button = document.querySelector('button');
+            const select = document.querySelector('select');
+
+            const savedValue = localStorage.getItem('input')//값을 불러올때
+            const color = localStorage.getItem('color')
+            document.body.style.backgroundColor = 'red';
+            //localStorage.input 도 가능하다.
+            (savedValue) ? (input.value = savedValue,p.textContent = `이전 실행 때의 마지막 값 ${savedValue}`) 
+            : null;
+            (color !== null) ? (document.body.style.backgroundColor = color,select.value = color) : document.body.style.backgroundColor = 'red';
+
+            input.addEventListener('keyup',(e)=>{
+                const value = e.currentTarget.value
+                localStorage.setItem('input',value) //값을 저장할때
+                //localStorage.input = value 도 가능
+            })
+
+            button.addEventListener('click',(e)=>{
+                localStorage.clear() //값을 모두 제거할떄
+                input.value = ''
+            })
+
+            select.addEventListener('change', ()=>{
+                const color = select.options[select.selectedIndex].value
+                document.body.style.backgroundColor = color
+                localStorage.setItem('color',color)
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <p></p>
+    <button>지우기</button>
+    <input type="text" name="" id="">
+    <select>
+        <option value="red">빨간색</option>
+        <option value="blue">파란색</option>
+        <option value="green">초록색</option>
+    </select>
+</body>
+</html>

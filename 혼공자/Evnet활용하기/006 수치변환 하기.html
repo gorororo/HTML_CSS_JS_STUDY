@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm단위를 여러 단위로 변환하는 프로그램</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.querySelector('input');
+            const select = document.querySelector('select');
+            const span = document.querySelector('span');
+
+            const handler = ()=>{
+                const value = Number(input.value)
+                const selected = select.options[select.options.selectedIndex]
+                span.textContent = value * Number(selected.value)
+            }
+            input.addEventListener('keyup',handler);
+            select.addEventListener('keyup',handler);
+            // let 현재값;
+            // let 변환상수 = 10;
+            
+            // const calculate =()=>{
+            //     span.textContent = (현재값 * 변환상수).toFixed(2)
+            // }
+
+            // select.addEventListener('change',(e)=>{
+            //     const options = e.currentTarget.options;
+            //     const index = e.currentTarget.options.selectedIndex
+            //     변환상수 = Number(options[index].value)
+            //     calculate();
+            // })
+
+            // input.addEventListener('keyup',(e)=>{
+            //     현재값 = Number(e.currentTarget.value)
+            //     calculate();
+            // })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" value="0"> cm =
+    <span>0</span>
+    <select name="" id="">
+        <option value="10">mm</option>
+        <option value="0.01">m</option> <!--밑에 코드라면 1어야한다-->
+        <option value="0.393701">inch</option>
+    </select>
+</body>
+</html>
