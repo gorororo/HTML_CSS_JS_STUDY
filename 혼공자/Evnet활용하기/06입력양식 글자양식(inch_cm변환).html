@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const input = document.querySelector('input');
+            const p = document.querySelector('p');
+            
+
+            // keydown -> keypress -> 입력양식에 값이 들어감! -> keyup
+            // change 이벤트 :  입력 양식 전체에 값 입력을 마쳤을때!
+            // 아시아권 문자는 keypress 에서 제대로 값을 얻어오지 못하는 문제가 있다 그래서 keyup 을 사용
+            input.addEventListener('change',()=>{
+                p.textContent = `${Number(input.value) * 2.54}Cm로 변환되었습니다.`
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text">inch<br>
+    <p></p>
+</body>
+</html>
