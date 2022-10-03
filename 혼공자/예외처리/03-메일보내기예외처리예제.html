@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function isRequired (객체, 속성이름){
+                if (typeof (객체[속성이름]) === 'undefined') {
+                    throw `${속성이름}매개변수에 문제가 있습니다!.`;
+                }
+            }
+            function 메일보내기(객체) {
+                // 매개변수가 잘못 들어왔다! -> 예외!
+                isRequired(객체,'발신인')
+                isRequired(객체,'수신인')
+                isRequired(객체,'내용')
+                // if (typeof (객체.발신인) === 'undefined') {
+                //     throw "발신인 매개변수에 문제가 있습니다!.";
+                // }
+                // if (typeof (객체.수신인) === 'undefined') {
+                //     throw "수신인 매개변수에 문제가 있습니다!.";
+                // }
+                // if (typeof (객체.내용) === 'undefined') {
+                //     throw "내용 매개변수에 문제가 있습니다!.";
+                // }
+                console.log(`발신인 : ${객체.발신인}`);
+                console.log(`수신인 : ${객체.수신인}`);
+                console.log(객체.내용);
+            }
+
+            메일보내기({
+                발신인: "별",
+                수신인: "구름",
+                내욤: "간식줘!",
+            });
+            //과거의 패러다임: 짧고 빠른 코드를 작성하자!
+            //현재의 패러다임: 쉽게 읽을 수 있는 코드를 작성하자!
+        </script>
+    </body>
+</html>

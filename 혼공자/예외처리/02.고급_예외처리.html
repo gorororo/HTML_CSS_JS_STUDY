@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            function test () {
+                try{
+                    alert('A 위치 입니다.');
+                    throw '예외 강제 발생'
+                }catch(exception){
+                    alert('B 위치 입니다.');
+                    return;
+                }finally{
+                    alert('C 위치 입니다.')
+                }
+                // alert('C 위치 입니다');// 나오지 않는다 리턴으로 이미 빠져나기때문 이럴떄 finally 를 이용한다
+                
+            };
+            test()
+        });
+    </script>
+</body>
+</html>

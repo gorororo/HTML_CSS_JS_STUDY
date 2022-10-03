@@ -1,0 +1,37 @@
+<script>
+    class Pet{
+        //생성자! -> 클래스로 객체를 생성할 떄 호출되는 녀석
+        constructor(이름,귀여움,공격성,겁,먹성){
+            //속성을 만드는 부분!
+            this.이름 = 이름
+            this.귀여움 = 귀여움
+            this.공격성 = 공격성
+            this.겁 = 겁
+            this.먹성 = 먹성
+        }
+        //메서드를 만드는 부분!
+        getSum (){
+            return this.귀여움 + this.공격성 + this.겁 + this.먹성
+        }
+
+        getAverage(){
+            return this.getSum() / pets.length
+        }
+    }
+
+    const pets = [
+        //객체를 생성!
+        new Pet('별이', 90, 50 , 90 , 50),
+        new Pet('토리', 80, 80 , 40 , 60),
+        new Pet('똘똘이', 80, 100 , 60 , 80),
+        new Pet('치즈', 70, 90 , 100 , 80),
+    ]
+
+    let output = '이름\t총점\t평균\n'
+    for ( const pet of pets){
+        output += `${pet.이름}\t${pet.getSum()}점\t${pet.getAverage()}점\n`
+    }
+    console.log(output)
+    console.log(pets.length)
+
+</script>

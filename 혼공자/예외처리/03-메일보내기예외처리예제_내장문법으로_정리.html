@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function isRequired (이름){ throw `${이름} 매게변수에 문제가 있습니다.`}
+            function 메일보내기({
+                발신인=isRequired('발신인'),
+                수신인=isRequired('수신인'),
+                내용=isRequired('내용'),
+            }) {
+                // 매개변수가 잘못 들어왔다! -> 예외!
+                console.log(`발신인 : ${발신인}`);
+                console.log(`수신인 : ${수신인}`);
+                console.log(내용);
+            }
+
+            function 함수 (매개변수 = '기본값'){}
+
+            메일보내기({
+                발신인: "밤이",
+                수신인: "토리",
+                내욤: "간식줘!",
+            });
+            //과거의 패러다임: 짧고 빠른 코드를 작성하자!
+            //현재의 패러다임: 쉽게 읽을 수 있는 코드를 작성하자!
+
+            // 하나 더!
+            function 메일보내기({
+                발신인='사용자',
+                수신인='관리자',
+                내용='문제가 발생했음!',
+            }={}) {
+                // 매개변수가 잘못 들어왔다! -> 예외!
+                console.log(`발신인 : ${발신인}`);
+                console.log(`수신인 : ${수신인}`);
+                console.log(내용);
+            }
+            메일보내기()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<script>
+    const  pets= [
+        {이름 : '별이' , 귀여움 : 90 , 공격성 : 50 , 겁 : 90 , 먹성 : 50},
+        {이름 : '토리' , 귀여움 : 80 , 공격성 : 80 , 겁 : 40 , 먹성 : 60},
+        {이름 : '똘똘이', 귀여움 : 80 , 공격성 : 100 , 겁 : 60 , 먹성 : 80},
+        {이름 : '치즈' , 귀여움 : 70 , 공격성 : 90 , 겁 : 100 , 먹성 : 80},
+    ]
+
+    for (const pet of pets) {
+        pet.get총점 = function(){
+            return this.귀여움 + this.공격성 + this.겁 + this.먹성 
+        }
+        
+        pet.get평균 = function(){
+            return this.get총점() / pets.length
+        }
+    }
+
+    let output = '이름\t총점\t평균\n'
+    for ( const pet of pets){
+        output += `${pet.이름}\t${pet.get총점()}점\t${pet.get평균()}점\n`
+    }
+    console.log(output)
+    console.log(pets.length)
+</script>
