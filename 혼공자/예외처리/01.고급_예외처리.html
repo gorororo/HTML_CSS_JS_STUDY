@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            console.log(`예외가 발생할수 있는 코드`);
+        }catch(e){
+            console.log(`예외가 발생할 때 실행할 코드`);
+        }finally{
+            console.log('무조건 적으로 실핼항 코드')
+        }
+    
+        try{
+            console.log(`try 구문의 마지막 줄`);
+        }catch(e){
+            console.log(` catch 구문의 마지막 줄`);
+        }finally{
+            console.log('finally 구문의 마지막 줄');
+        }
+    </script>
+</body>
+</html>
