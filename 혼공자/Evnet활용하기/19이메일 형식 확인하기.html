@@ -9,7 +9,6 @@
         document.addEventListener('DOMContentLoaded',()=>{
             const input = document.querySelector('input');
             const p = document.querySelector('p');
-            const re = /ab+c/;
             const isEmail = (value) => { 
                 // 골뱅이를 갖고 있고 && 골뱅이 뒤에 점이 있다면
                 return (value.indexOf('@')>1) 
@@ -32,5 +31,6 @@
 <body>
     <input type="text">
     <p></p>
+
 </body>
 </html>
