@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style>
+        body{
+            height: 500vh;
+        }
+        .sample{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img class="sample"  src="./IMG/seq_red/Green_(1).jpg" alt="scroll-01">
+
+    <script>
+        const MAX = 150;
+        const tagImg = document.querySelector('.sample');
+        const videoImages = [];
+        const loadImages = ()=>{
+            for(let i=1; i<=MAX ; i++){
+                let imgElem = new Image();
+                imgElem.src = `./IMG/seq_red/Green_(${i}).jpg`;
+                videoImages.push(imgElem);
+            }
+        }
+        // const drawFrame = (per)=>{
+        //         let currentFrame = Math.floor(per *(MAX-1));
+        //         tagImg.src = videoImages[currentFrame].src;
+        //         requestAnimationFrame(drawFrame)
+        // }
+        const handlerScroll = ()=>{
+            let progress = scrollY / (document.body.offsetHeight - innerHeight);
+            window.requestAnimationFrame(()=>{
+                let currentFrame = Math.floor(progress *(MAX-1));
+                tagImg.src = videoImages[currentFrame]?.src;
+            });
+            // window.requestAnimationFrame(drawFrame)
+            // drawFrame(progress);
+        }
+
+        const init = ()=>{
+            loadImages();
+            window.addEventListener('scroll',handlerScroll)
+        }
+        window.addEventListener('load',init)
+    </script>
+</body>
+</html>

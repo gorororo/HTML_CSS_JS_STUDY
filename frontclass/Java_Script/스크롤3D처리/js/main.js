@@ -80,8 +80,12 @@ const handlerMenuClick = (event)=>{
     if(target.tagName === 'A'){
         //메뉴 이동
         const idx= target.getAttribute('href');
+        console.log()
         tagBox.style.transform = `translateZ(${zSecPos[idx]}vw)`;
         setMenuActive(idx);
+        for(let i = 0 ; i<tagBox.length ; i++){
+            scrollTo(0,document.scrollingElement.scrollHeight/4*i);
+        }
     }
 }
 
