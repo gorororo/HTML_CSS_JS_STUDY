@@ -1,0 +1,15 @@
+<script>
+    class Square{
+        static count = 0
+        static test = ()=>{}
+        constructor(length){
+            Square.count +=1
+        }
+    }
+
+    console.log(Square.count)
+    new Square()
+    new Square()
+    new Square()
+    console.log(Square.count)
+</script>

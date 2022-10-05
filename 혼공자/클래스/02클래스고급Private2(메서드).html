@@ -1,0 +1,16 @@
+<script>
+    // private 메서드
+    class Square {
+        #a
+        #test (){
+            console.log('private test() 메서드 입니다.')
+        }
+
+        constructor(){
+            this.#test()
+        }
+    }
+
+    const square = new Square()
+    square.#test(); //외부에서 접근할수 없다.
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 정사각형을 나타내는 객체
+            class Square {
+                // private 속성 : 클래스 내부에서만 접근 가능한 속성
+                #length
+                constructor(length) {
+                    if (length < 0) {
+                        throw "길이는 0이상이여야 합니다.";
+                    }
+                    this.#length = length;
+                }
+                get area() {
+                    return this.#length * this.#length;
+                }
+                get perimeter() {
+                    return 4 * this.#length;
+                }
+
+                set length(length){
+                    if(length < 0 ){ `길이는 0이상이어야 합니다.`}
+                    this.#length = length
+                }
+                get length(){
+                    return this.#length
+                }
+            }
+
+            const square = new Square(10);
+            console.log(square.area);
+            console.log(square.perimeter);
+
+            console.log(square.length);
+            square.length = 20
+            console.log(square.length);
+            
+        </script>
+    </body>
+</html>

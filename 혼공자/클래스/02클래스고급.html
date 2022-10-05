@@ -1,0 +1,23 @@
+<script>
+    // 정사각형을 나타내는 객체
+    class Square{
+        constructor(length){
+            if (length < 0){ throw '길이는 0이상이여야 합니다.' }
+            this.length = length;
+        }
+        getArea(){
+            return this.length * this.length
+        }
+        getPerimeter(){
+            return 4 * this.length
+        }
+    }
+
+    const square = new Square(10)
+    console.log(square.getArea())
+    console.log(square.getPerimeter())
+    
+    square.length = -10 // 길이는 음수일수 없는데 이렇게 접근하면 위에 조건문으로 막아도 어쩔수없다
+    console.log(square.getArea())
+    console.log(square.getPerimeter())
+</script>
