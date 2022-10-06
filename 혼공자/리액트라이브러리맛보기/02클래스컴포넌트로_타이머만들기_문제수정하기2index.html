@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class Timer extends React.Component{
+                constructor(props){
+                    super(props);
+                    // 화면에 변화하는 값을 만들 때 this.state 객체
+                    this.state = {
+                        time: new Date().toLocaleString();
+                    }
+                    
+                }
+
+                render(){
+                    return <h1>{this.state.time}</h1>
+                }
+                componentDidmount(){ //값을 쓸때
+                    this.timerId = setInterval(()=>{
+                        // 화면에 변화하는 값을 지정하고 + 반영할 때 this.setState()
+                        this.setState({
+                            time: new Date().toLocaleString();
+                        })
+                    },1000)
+                }
+                conponentWillUnMount(){ //값을 지울때
+                    clearInterval(this.timerId);
+                }
+            }
+
+            class App extends React.Component {
+                constructor(props) { super(props) };
+                render() { return <Timer /> };
+            }
+
+            const 컴포넌트 = <App />;
+            const 컨테이너 = document.querySelector("#root");
+            ReactDOM.render(컴포넌트, 컨테이너);
+        </script>
+    </body>
+</html>
