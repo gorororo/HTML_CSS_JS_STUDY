@@ -17,7 +17,7 @@
                     super(props);
                     // 화면에 변화하는 값을 만들 때 this.state 객체
                     this.state = {
-                        time: new Date().toLocaleString();
+                        time: new Date().toLocaleString()
                     }
                     
                 }
@@ -29,7 +29,7 @@
                     this.timerId = setInterval(()=>{
                         // 화면에 변화하는 값을 지정하고 + 반영할 때 this.setState()
                         this.setState({
-                            time: new Date().toLocaleString();
+                            time: new Date().toLocaleString()
                         })
                     },1000)
                 }
