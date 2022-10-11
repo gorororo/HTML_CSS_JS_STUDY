@@ -110,11 +110,92 @@ const sectionAniPlay = (prevHeight) =>{
             }
             break;
         case 3 : //section-3
-            const heightRatio = window.innerHeight / 1080;
-            tagObjs.canvas.style.transform = `scale(${heightRatio}px)`
-            tagObjs.videoImages[0].onload = () =>{
-                tagObjs.context.drawImage(tagObjs.videoImages[0],0,0);
+            //가로와 세로 사이즈를 꽉 차게 하기 위해서
+            const widthRatio = document.body.offsetWidth / tagObjs.canvas.width;
+            const heightRatio = window.innerHeight / tagObjs.canvas.height;
+            let canvasRatio;
+            if (widthRatio <= heightRatio){ //브라우저 길게 가는 경우
+                canvasRatio = heightRatio;
+            }else{
+                canvasRatio = widthRatio;
             }
+            tagObjs.canvas.style.transform = `scale(${canvasRatio})`;
+            tagObjs.context.fillStyle = 'gray';
+            tagObjs.context.drawImage(tagObjs.videoImages[0],0,0);
+
+            // 캔버스 사이즈에 맞춘  width, height
+            const rectInnerWidth = document.body.offsetWidth / canvasRatio;
+            const rectInnerHeight = window.innerHeight / canvasRatio;
+            if( !values.rectStartY ){
+                // values.rectStartY = tagObjs.canvas.getBoundingClientRect().top;
+                values.rectStartY = tagObjs.canvas.offsetTop + (tagObjs.canvas.height*canvasRatio)/2;
+                const temp = sceneInfo[currentScene].scrollHeight;
+                values.rectL[2].start = (window.innerHeight/2) / temp;
+                values.rectL[2].end = values.rectStartY / temp;
+                values.rectR[2].start = (window.innerHeight/2) / temp;
+                values.rectR[2].end = values.rectStartY / temp;
+            }
+            const rectWidth = rectInnerWidth * 0.15;
+            values.rectL[0] = (tagObjs.canvas.width-rectInnerWidth)/2;
+            values.rectL[1] = values.rectL[0] - rectWidth;
+            values.rectR[0] = values.rectL[0] + rectInnerWidth - rectWidth;
+            values.rectR[1] = values.rectR[0] + rectWidth;
+
+            tagObjs.context.fillRect( 
+                parseInt(partAniPlay(values.rectL,currentYoffset)),
+                0,
+                parseInt(rectWidth),
+                tagObjs.canvas.height
+                );
+            tagObjs.context.fillRect( 
+                parseInt(partAniPlay(values.rectR,currentYoffset)),
+                0,
+                parseInt(rectWidth),
+                tagObjs.canvas.height
+                );
+            
+            //이미지 고정
+            if(scrollRatio < values.rectR[2].end){
+                //캔버스에 닿기 전
+                tagObjs.canvas.classList.remove('fixed');
+            }else{
+                //캔버스에 닿은 후
+                //이미지가 바뀌어서 보여야 함.
+                values.blendHeight[0] = 0;
+                values.blendHeight[1] = tagObjs.canvas.height;
+                values.blendHeight[2].start = values.rectR[2].end;
+                values.blendHeight[2].end = values.blendHeight[2].start + 0.3;
+                const blendH = partAniPlay(values.blendHeight,currentYoffset);
+                tagObjs.context.drawImage( tagObjs.videoImages[1],
+                    0,tagObjs.canvas.height - blendH , tagObjs.canvas.width,blendH,
+                    0,tagObjs.canvas.height - blendH , tagObjs.canvas.width,blendH)
+                //고정
+                tagObjs.canvas.classList.add('fixed');
+                tagObjs.canvas.style.top = 
+                `${-(tagObjs.canvas.height-tagObjs.canvas.height*canvasRatio)/2}px`
+
+                //고정해제 스케일 지정
+                if( scrollRatio > values.blendHeight[2].end){
+                    
+                    values.canvasScale[0] = canvasRatio;
+                    values.canvasScale[1] = canvasRatio*0.7;
+                    values.canvasScale[2].start = values.blendHeight[2].end;
+                    values.canvasScale[2].end =values.canvasScale[2].start + 0.3;
+                    tagObjs.canvas.style.transform = `scale(${partAniPlay(values.canvasScale,currentYoffset)})`
+                }
+                //fixed 종료
+                if (scrollY === document.scrollingElement.scrollHeight-window.innerHeight){
+                    tagObjs.canvas.classList.remove('fixed');
+                    tagObjs.canvas.style.marginTop = `${sceneInfo[currentScene].scrollHeight*0.6}px`;
+
+                    //canvas and caption position
+                    values.canvasPosY[2].start = values.canvasScale[2].end + 0.1;
+                    values.canvasPosY[2].end = values.canvasPosY[2].
+                    start +0.2;
+                    tagObjs.desc.style.transform = `translateY(${partAniPlay(values.canvasPosY,currentYoffset)})`;
+                }
+            }
+            
             break;
     }
 }
@@ -142,10 +223,6 @@ const setSecHeight = () => {
     }
     setCurrentScene();
 };
-
-const drawFirstImages = () => {
-
-}
 
 const setCanvasImages = () => {
     let imgElem;

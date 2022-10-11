@@ -10,7 +10,6 @@ body{
 /* nav */
 .global-nav{
     position: absolute;
-    
     top: 0;
     left: 0;
     height: 45px;
@@ -26,13 +25,12 @@ body{
     width: 100%;
     padding: 1rem;
     z-index: 99;
-    transition: 0.2s;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 .local-nav.local-nav-fixed{
     position: fixed;
     top: 0;
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
 }
 
 .global-nav-link,
@@ -57,10 +55,6 @@ body{
 /* section style */
 section{
     padding-top: 50vh;
-    border: 1px solid red;
-}
-canvas{
-    border: 1px solid red;
 }
 #scroll-section-0 > h1{
     position: relative;
@@ -82,7 +76,6 @@ canvas{
     color: #222;
     font-size: 3rem;
     margin-right: 0.3em;
-    margin-top: 0.25em;
 }
 #scroll-section-2 p .b{
     top: 10vh;
@@ -93,12 +86,15 @@ canvas{
     left: 60%;
 }
 #scroll-section-3{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#canvas-3{
-    border: 2px solid red;
+#canvas-3.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 /* footer */
 footer{
@@ -127,6 +123,17 @@ footer{
     font-size: 1.5rem;
     text-align: center;
 }
+.desc-msg{
+    width: 50%;
+    top: 20%;
+    left: 60%;
+    
+}
+.desc-msg > .line{
+    width: 1px;
+    height: 100px;
+    background-color: #222;
+}
 .mid-msg{
     max-width: 1000px;
     margin: 0 auto;
@@ -141,7 +148,7 @@ footer{
 }
 .canvas-desc{
     max-width: 1000px;
-    margin: auto;
+    margin: -13rem auto 0;
     padding: 0 1rem;
     font-size: 1.2rem;
     color: #888;
@@ -151,14 +158,18 @@ footer{
     position: fixed;
     left: 0;
     width: 100%;
-    
+}
+.desc-msg.c > .line{
+    width: 100px;
+    height: 1px;
+    background-color: #222;
+    transform: translateX(130%);
 }
 .sec-canvas{
     top: 0;
     height: 100%;
-    /* background-color: #888; */
 }
-.sec-canvas > canvas{
+.sec-canvas canvas{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -167,24 +178,12 @@ footer{
     width: 50%;
     top: 20%;
     left: 60%;
-    
 }
 .desc-msg.c{
     top: 40%;
     left: 20%;
-    transform: translate() scale();
 }
-.desc-msg > .line{
-    width: 1px;
-    height: 100px;
-    background-color: #222;
-}
-.desc-msg.c > .line{
-    width: 100px;
-    height: 1px;
-    background-color: #222;
-    transform: translateX(130%);
-}
+
 #show-section-0 #scroll-section-0 .sticky-msg,
 #show-section-1 #scroll-section-1 .sticky-msg,
 #show-section-2 #scroll-section-2 .sticky-msg,

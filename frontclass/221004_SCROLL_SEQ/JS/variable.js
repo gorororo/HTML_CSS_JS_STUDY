@@ -86,8 +86,17 @@ const sceneInfo = [
             container : document.querySelector('#scroll-section-3'),
             canvas : document.querySelector('#canvas-3'),
             context : document.querySelector('#canvas-3').getContext('2d'),
+            desc : document.querySelector('.canvas-desc'),
             videoImages:[],
         },
-        values : {},
+        values : {
+            rectL : [0,0,{start : 0,end : 0}],
+            rectR : [0,0,{start : 0,end : 0}],
+            rectStartY : 0,
+            blendHeight : [0,0,{start : 0,end: 0}],
+            canvasScale : [0,0,{start : 0,end: 0}],
+            canvasPosY :  [30,0,{start : 0,end: 0}],
+
+        },
     },
 ]
