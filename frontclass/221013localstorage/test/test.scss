@@ -1,0 +1,17 @@
+/* */
+//@at-root
+
+/* a
+b
+c
+d
+e */  
+$color-primary : #eee;
+$url-images : '';
+$w : 200px;
+
+.box{
+    width: $w;
+    margin-left: $w;
+    background: $color-primary url($url-images + 'logo.png');
+}

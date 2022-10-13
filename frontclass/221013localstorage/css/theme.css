@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+html{
+    --bg-color : #fff;/*사용자 지정으로 만든 변수*/
+    --text-color : #121212;
+    --link-color : #222;
+}
+html.dark{
+    --bg-color : #121212;
+    --text-color : #fff;
+    --link-color :  #fff;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+a{
+    color: var(--link-color);
+}
