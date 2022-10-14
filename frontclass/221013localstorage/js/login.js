@@ -1,7 +1,7 @@
 const LOGIN_KEY = 'username';
 const tagP = document.querySelector('.loginName');
 const tagForm = document.querySelector('#loginForm');
-const tagInput = tagForm.querySelector('input');
+const tagInput = tagForm.querySelector('#loginForm>input');
 
 const viewUserName = (userName) =>{
     //p태그에 보여주기
@@ -26,13 +26,13 @@ const init = ()=>{
     const username = localStorage.getItem(LOGIN_KEY) ;
     if(username){
         //값이 있을때
-        console.log('값이 있을때');
+        // console.log('값이 있을때');
         viewUserName(username);
     }else{
         //값이 없을때
         tagForm.addEventListener('submit',handlerSubmit);
     }
-    console.log(username);
+    // console.log(username);
 }
 
 window.addEventListener('load',init);

@@ -5,32 +5,50 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>모멘텀</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/theme.css" />
     </head>
     <body>
-        <button class="theme">Toggle Theme</button>
-        <p class="hidden loginName" >Hello</p>
-        
-        <form id="loginForm">
-            <input type="text" placeholder="로그인 이름 입력" required>
-            <button>log-In</button>
-        </form>
-        <h1 class="timetable">
+        <div class="weather">
+            <img class="icon" />
+            <div class="weaterInfo">
+                <p class="main"></p>
+                <p class="clous"></p>
+                <p class="celsius"></p>
+            </div>
+        </div>
 
-        </h1>
-        <div class="quote">
-            <span>명언</span>
-            <span>작가</span>
+        <button class="theme">Toggle Theme</button>
+
+        <div class="centerWrapper">
+            <p class="hidden loginName">Hello</p>
+            <form id="loginForm">
+                <input type="text" placeholder="로그인 이름 입력" required />
+                <br>
+                <button>log-In</button>
+            </form>
+            <h1 class="timetable"></h1>
+            <div class="quote">
+                <span>명언</span></br>
+                <span>작가</span>
+            </div>
             <button class="quotebtn">명언 바꾸기</button>
         </div>
-        <form id="todoForm">
-            <input type="text" placeholder="할 일을 입력하세요" required>
-        </form>
-        <ul class="todoList">
 
-        </ul>
+        <form id="todoForm">
+            <input type="text" placeholder="할 일을 입력하세요" required />
+        </form>
+        <ul class="todoList"></ul>
+        <script src="./js/weatherApi.js"></script>
+        <script src="./js/background.js"></script>
+        <script src="./js/petch.js"></script>
         <script src="./js/clock.js"></script>
         <script src="./js/quotes.js"></script>
         <script src="./js/theme.js"></script>

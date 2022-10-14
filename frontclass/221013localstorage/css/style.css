@@ -1,4 +1,76 @@
 @charset "utf-8";
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .hidden{
     display: none;
+
+}
+body{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg_desc{
+    position: fixed;
+    bottom: 15px;
+    text-align: center;
+}
+button{
+    border-radius: 20px;
+    background-color: #d9d9d9 !important;
+    color: #222 !important;
+    border: none;
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+input{
+    text-align: center;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    background-color: #222 !important;
+    color: #d9d9d9 !important;
+}
+/* weather */
+.weather{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    margin: 0 20px 0 20px;
+}
+/* toggle */
+.theme{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+/* center */
+.centerWrapper{
+    width: 60%;
+    height: 400px;
+    background-color: rgba(170,170,170,0.7);
+    margin: 5% auto;
+    text-align: center;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.timetable{
+    font-size: 6rem;
+}
+#loginForm>input{
+    margin-top: 0.7rem;
+}
+#loginForm>button{
+    margin-top: 0.7rem;
+}
+.loginName{
+    margin-top: 1rem;
+    font-size: 2rem;
 }

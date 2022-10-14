@@ -25,8 +25,9 @@ const tagQuoteBtn = document.querySelector(".quotebtn");
 
 const handlerQuote = () => {
     let randomNum = Math.floor(Math.random() * quotes.length);
+    // if(randomNum!==randomNum){}
     tagQuote.children[0].textContent = quotes[randomNum].quote;
-    tagQuote.children[1].textContent = `--${quotes[randomNum].author}--`;
+    tagQuote.children[2].textContent = `—${quotes[randomNum].author}—`;
 };
 
 const quotesInit = () => {
