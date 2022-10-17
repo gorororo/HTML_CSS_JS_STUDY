@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>체질량지수 계산하기</title>
+    </head>
+    <body>
+        <p>키: <input type="number" id="height" placeholder="미터로입력ex(1.87)"/>m</p>
+        <p>몸무게: <input type="number" id="weight" />kg</p>
+        <p>당신의 체질량지수는 <output id="bmi">?</output>입니다</p>
+        <input type="button" id="button" value="계산" />
+        <script defer>
+            window.addEventListener('load',()=>{
+                document.getElementById('button').onclick = ()=>{
+                    let h = parseFloat(document.getElementById('height').value);
+                    let w = parseFloat(document.getElementById('weight').value);
+
+                    const bmi = document.getElementById('bmi');
+                    bmi.innerHTML = (w/h/h).toFixed(1);
+                }
+            })
+        </script>
+    </body>
+</html>

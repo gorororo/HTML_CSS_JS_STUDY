@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스톱워치</title>
+        <script defer>
+            'use strict'
+            window.onload = ()=>{
+                const startBtn = document.querySelector('#start');
+                const stopBtn = document.querySelector('#stop');
+                const display = document.querySelector('#display');
+                let startTime,timer;
+                const start = ()=>{
+                    startBtn.onclick = null;
+                    stopBtn.onclick = stop;
+                    startTime = new Date();
+                    timer = setInterval(()=>{
+                        let now = new Date();
+                        display.innerHTML = ((now-startTime)/1000).toFixed(2);
+                    },10);
+                }
+                const stop=()=>{
+                    clearInterval(timer);
+                    startBtn.onclick = start;
+                }
+                startBtn.onclick = start;
+                // startBtn.addEventListener('click',start);
+                // stopBtn.addEventListener('click',stop);
+                
+            };
+        </script>
+    </head>
+    <body>
+        <p id="display">0.00</p>
+        <input id="start" type="button" value="start">
+        <input id="stop" type="button" value="stop">
+    </body>
+</html>

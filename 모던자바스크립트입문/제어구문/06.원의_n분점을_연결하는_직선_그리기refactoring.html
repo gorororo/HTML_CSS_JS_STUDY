@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>원의 n분점을 연결하는 직선 그리기</title>
+    </head>
+    <body>
+        <canvas id="mycanvas" width="1000" height="400"></canvas>
+        <script defer>
+            const diamond=(c,n,x,y,r,color)=>{
+                let p = generatePoints(n,x,y,r);
+                c.strokeStyle = color;
+                c.beginPath();
+                for(let i = 0 ; i < n; i++){
+                    for (let j = i + 1; j < n; j++) {
+                        c.moveTo(p[i].x,p[i].y);
+                        c.lineTo(p[j].x,p[j].y);
+                    }
+                }
+                c.stroke();
+            }
+            const generatePoints=(n,x,y,r)=>{
+                let points = [];
+                for(let i = 0; i<n; i++){
+                    let t = i * 2 * Math.PI / n ;
+                    points[i]={
+                        x: x+r * Math.cos(t),
+                        y: y+r * Math.sin(t)
+                    };
+                }
+                return points;
+            }
+            window.onload = () => {
+                let canvas =document.getElementById("mycanvas");
+                let ctx = canvas.getContext('2d');
+                diamond(ctx, 6,170,170,150,'darkblue');
+                diamond(ctx,12,490,170,150,'darkblue');
+                diamond(ctx,18,810,170,150,'darkblue');
+            };
+        </script>
+    </body>
+</html>
