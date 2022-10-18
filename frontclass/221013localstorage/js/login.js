@@ -6,7 +6,7 @@ const tagInput = tagForm.querySelector('#loginForm>input');
 const viewUserName = (userName) =>{
     //p태그에 보여주기
     tagP.classList.remove('hidden');
-    tagP.textContent = `Hello ${userName}`;
+    tagP.textContent = `Hello "${userName}"`;
     //form은 보이지 않게
     tagForm.classList.add('hidden');
 }

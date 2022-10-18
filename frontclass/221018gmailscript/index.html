@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+    </head>
+    <body>
+        <section>
+            <h1>Contact</h1>
+            <form
+                class="gform"
+                method="POST"
+                data-email="wocorl@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbxxeQPjjWSglqaD8cKEm5Lt2e1bDkXqtzPazOCCGdGPCPOBYvHoYdea2jW_Wd08qjLV/exec"
+            >
+                <fieldset class="form-elements">
+                    <div class="box-input">
+                        <label for="userName">Name</label>
+                        <input
+                            type="text"
+                            id="userName"
+                            name="name"
+                            placeholder="이름입력"
+                        />
+                    </div>
+                    <div class="box-input">
+                        <label for="userEmail">Email-Address</label>
+                        <input
+                            type="email"
+                            id="userEmail"
+                            name="email"
+                            placeholder="이메일입력"
+                        />
+                    </div>
+                    <div class="box-input">
+                        <label for="userMessage">Message</label>
+                        <textarea name="message" id="userMessage"></textarea>
+                    </div>
+                    <div class="box-input">
+                        <button type="submit" class="btn-send">
+                            Send Message
+                        </button>
+                    </div>
+                </fieldset>
+                <div class="thankyou_message" style="display: none">
+                    <p>
+                        메일이 성공적으로 보내졌습니다. 빠른 시일 내에 답변
+                        드리겠습니다.
+                    </p>
+                </div>
+            </form>
+        </section>
+        <iframe src="https://calendar.google.com/calendar/embed?src=de054dbc17a6e91820e4d75acaaf62f1ca0e2abe4bffa6781cbd76e7eb057cd9%40group.calendar.google.com&ctz=Asia%2FSeoul" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <script
+            data-cfasync="false"
+            src="./js/form-submission-handler.js"
+        ></script>
+    </body>
+</html>

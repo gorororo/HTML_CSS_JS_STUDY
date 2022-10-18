@@ -2,9 +2,11 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+button{
+    cursor: pointer;
+}
 .hidden{
     display: none;
-
 }
 body{
     background-position: center;
@@ -18,8 +20,8 @@ body{
 }
 button{
     border-radius: 20px;
-    background-color: #d9d9d9 !important;
-    color: #222 !important;
+    background-color: #d9d9d9 ;
+    color: #222 ;
     border: none;
     width: 150px;
     height: 30px;
@@ -31,35 +33,43 @@ input{
     border-radius: 10px;
     width: 200px;
     height: 30px;
-    background-color: #222 !important;
+    background-color: rgb(148, 148, 148) !important;
     color: #d9d9d9 !important;
 }
 /* weather */
 .weather{
+    position: fixed;
+    top: 20px;
+    left: 20px;
     display: flex;
     align-items: center;
 }
 .icon{
-    margin: 0 20px 0 20px;
+    padding: 20px;
 }
 /* toggle */
 .theme{
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 50px;
+    top: 50px;
 }
 /* center */
 .centerWrapper{
-    width: 60%;
+    position: absolute;
+    width: 40%;
     height: 400px;
     background-color: rgba(170,170,170,0.7);
-    margin: 5% auto;
+    padding: 20px;
+    margin: 0 auto;
     text-align: center;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .timetable{
     font-size: 6rem;
@@ -73,4 +83,144 @@ input{
 .loginName{
     margin-top: 1rem;
     font-size: 2rem;
+}
+/* todo */
+#todoForm{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 50%;
+    left: 0%;
+    /* transform: translate(-50%,-50%); */
+}
+#todoForm input{
+    width: 400px;
+}
+.todoList{
+    width: 30%;
+    margin: 0 auto;
+    position: sticky;
+    top: 55%;
+}
+.todoList li{
+    margin-top: 5px;
+}
+.todoList li>button{
+    width: 40px !important;
+    text-align: center;
+}
+/* side menu */
+.sidebtn{
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    background-color: #d9d9d9;
+    color: #222;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebtn p {
+    padding-bottom: 5px;
+    z-index: 10;
+}
+.sidebtn::before{
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.sidebtn::before{
+    background-color: #222;
+}
+.sidebtn:hover::before{
+    height: 100%;
+}
+
+/* emailmodal */
+
+.emailmodal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+.emailbox{
+    width: 60%;
+    height: 80%;
+    background-color: #696868;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.emailbox h1{
+    background-color: rgb(104, 104, 104);
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+    border-radius: 20px 20px 0px 0px;
+}
+.form-elements{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-input{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box-input label{
+    background-color: rgb(104, 104, 104);
+    padding: 10px;
+    width: 100%;
+}
+.box-input input{
+    all : unset;
+    padding: 10px;
+    width: 100%;
+}
+.box-input textarea{
+    width: 100%;
+    height: 430px;
+    font-size: 1rem;
+}
+.btn-box{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.btn-box button:nth-of-type(1){
+    margin-left: 0;
+}
+.thankyou_message p{
+    text-align: center;
+    line-height: 680px;
+    font-size: 1.5rem;
+}
+.exitbtn{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.exitbtn>button{
+    position: absolute;
+    right: 15px;
+    top: -30px;
+}
+
+/*  footer  */
+.bg_desc{
+    width: 100%;
+    text-align: center;
 }

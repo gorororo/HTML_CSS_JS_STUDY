@@ -16,6 +16,62 @@
         <link rel="stylesheet" href="./css/theme.css" />
     </head>
     <body>
+        <div class="hidden emailmodal">
+            <div class=" emailbox">
+                <h1>Contact</h1>
+                <form
+                    class="gform"
+                    method="POST"
+                    data-email="wocorl@gmail.com"
+                    action="https://script.google.com/macros/s/AKfycbxxeQPjjWSglqaD8cKEm5Lt2e1bDkXqtzPazOCCGdGPCPOBYvHoYdea2jW_Wd08qjLV/exec"
+                >
+                    <fieldset class="form-elements">
+                        <div class="box-input">
+                            <label for="userName">Name</label>
+                            <input
+                                type="text"
+                                id="userName"
+                                name="name"
+                                placeholder="이름입력"
+                            />
+                        </div>
+                        <div class="box-input">
+                            <label for="userEmail">Email-Address</label>
+                            <input
+                                type="email"
+                                id="userEmail"
+                                name="email"
+                                placeholder="이메일입력"
+                            />
+                        </div>
+                        <div class="box-input">
+                            <label for="userMessage">Message</label>
+                            <textarea name="message" id="userMessage"></textarea>
+                        </div>
+                        <div class="btn-box">
+                            <button type="submit" class="btn-send">
+                                Send Message
+                            </button>
+                            <button type="reset" class="btn-reset">
+                                Send Reset
+                            </button>
+                        </div>
+                    </fieldset>
+                    <div class="thankyou_message" style="display: none">
+                        <p>
+                            메일이 성공적으로 보내졌습니다. 빠른 시일 내에 답변
+                            드리겠습니다.
+                        </p>
+                    </div>
+                </form>
+                <div class="exitbtn">
+                    <button type="button" class="btn-exit">
+                        Send exit
+                    </button>
+                </div>
+
+            </div>
+        </div>
         <div class="weather">
             <img class="icon" />
             <div class="weaterInfo">
@@ -29,7 +85,8 @@
 
         <div class="centerWrapper">
             <p class="hidden loginName">Hello</p>
-            <form id="loginForm">
+            <form
+            id="loginForm">
                 <input type="text" placeholder="로그인 이름 입력" required />
                 <br>
                 <button>log-In</button>
@@ -45,7 +102,11 @@
         <form id="todoForm">
             <input type="text" placeholder="할 일을 입력하세요" required />
         </form>
-        <ul class="todoList"></ul>
+
+        <ul class="todoList "></ul>
+        <div class="sidebtn">
+            <p>💌</p>
+        </div>
         <script src="./js/weatherApi.js"></script>
         <script src="./js/background.js"></script>
         <script src="./js/petch.js"></script>
@@ -54,5 +115,22 @@
         <script src="./js/theme.js"></script>
         <script src="./js/login.js"></script>
         <script src="./js/todoList.js"></script>
+        <script
+        data-cfasync="false"
+        src="./js/form-submission-handler.js"
+        ></script>
+        <script>
+            const elemEmailBtn = document.querySelector('.sidebtn');
+            const elemEmailExit = document.querySelector('.btn-exit');
+            elemEmailBtn.addEventListener('click',()=>{
+                document.querySelector('.emailmodal').classList.remove('hidden');
+                
+            })
+            elemEmailExit.onclick = ()=>{
+                document.querySelector('.emailmodal').classList.add('hidden');
+                history.go(0);
+            }
+        </script>
+
     </body>
 </html>
