@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>망델브로 집합 그리기</title>
+        <script defer>
+            document.addEventListener('DOMContentLoaded',()=>{
+                const canvas = document.getElementById("mycanvas");
+                const ctx = canvas.getContext("2d");
+                const width = canvas.width;
+                const height = canvas.height;
+                // 중심점을 설정하고 그린다
+                let xc = -0.6,
+                    yc = 0;
+                //설정에 따라 그리는 함수
+                const draw=()=> {
+                // 배율
+                let mag = document.getElementById("magnification").value;
+                // 최대 반복 횟수
+                let maxit = document.getElementById("maxit").value;
+                // 중심 좌표를 표시
+                displayCenter(xc, yc);
+                // 망델브로 집합을 그린다
+                mandelbrot(ctx, xc, yc, mag, maxit);
+                }
+                draw();
+                // 그리기 버튼을 클릭하면 그리기 시작
+                document.getElementById("button").onclick = draw;
+                // Canvas 위에서 마우스로 클릭한 지점을 중심 좌표로 설정한다
+                document.getElementById("mycanvas").onclick = (event)=>{
+                    let ix = event.offsetX;
+                    let iy = event.offsetY;
+                    let mag = parseFloat(
+                        document.getElementById("magnification").value
+                    );
+                    xc += ((2 * ix) / width - 1) / mag;
+                    yc += (2 * iy - height) / mag / width;
+                    draw();
+                };
+            }) ;
+
+            // 중심 좌표를 표시하는 함수
+            const displayCenter=(xc, yc)=>{
+                document.getElementById("xc").innerHTML = xc.toFixed(3);
+                document.getElementById("yc").innerHTML = yc.toFixed(3);
+            }
+            // 망델브로 집합을 그리는 함수
+            // c : canvas의 렌더링 컨텍스트
+            // xc,yc : 중심 좌표
+            // mag : 확대 배율
+            // maxit : 최대 반복 횟수
+            const mandelbrot=(c, xc, yc, mag, maxit)=>{
+                const w = c.canvas.width;
+                const h = c.canvas.height;
+                let xmin = xc - 1 / mag;
+                let xmax = xc + 1 / mag;
+                let ymin = yc - ((xmax - xmin) * h) / w / 2;
+                let ymax = yc + ((xmax - xmin) * h) / w / 2;
+                let dx = (xmax - xmin) / w;
+                let dy = (ymax - ymin) / h;
+                // 색상 구분용 색상(반지름 2 안에 있던 횟수로 색을 구분한다)
+                const color = [];
+                color[0] = "black"; // 망델브로 집합의 점의 색상은 검은색으로 함
+                let L = 255,
+                    dL = 255 / maxit;
+                for (let i = maxit; i > 0; i--) {
+                    color[i] = `rgb(255,${Math.floor(L)},255)`;
+                    L -= dL;
+                }
+                // x축 방향의 픽셀을 검사
+                for (let i = 0; i < w; i++) {
+                    let x = xmin + i * dx;
+                    // y축 방향의 픽셀을 검사
+                    for (let j = 0; j < h; j++) {
+                        let y = ymin + j * dy;
+                        // z1=x+iy
+                        let a = x,
+                            b = y;
+                        let a2 = a * a,
+                            b2 = b * b;
+                        let count;
+                        // 반지름 2안에 maxit번 이내면 반복한다
+                        for (count = maxit; a2 + b2 <= 4 && count; count--) {
+                            // z_n+1 = z_n^2 +x+iy
+                            b = 2 * a * b + y;
+                            a = a2 - b2 + x;
+                            a2 = a * a;
+                            b2 = b * b;
+                        }
+                        // count 값에 따라 색을 구분하여 점을 그린다
+                        c.fillStyle = color[count];
+                        c.fillRect(i, j, 1, 1);
+                    }
+                }
+            }
+        </script>
+        <style>
+            #mycanvas {
+                border: 1px solid gray;
+            }
+            input {
+                margin: 0 10px;
+                width: 60px;
+                text-align: center;
+            }
+            div {
+                font-size: small;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="mycanvas" width="800" height="640"></canvas>
+        <div>
+            중심 좌표(<span id="xc"></span>,<span id="yc"></span>) ← 마우스로
+            클릭하면 바뀝니다
+        </div>
+        <div>
+            <label
+                >확대 배율 :
+                <input id="magnification" type="number" value="0.65"
+            /></label>
+            <label
+                >최대 반복 횟수 : <input id="maxit" type="number" value="60"
+            /></label>
+            <input id="button" type="button" value="그리기" />
+        </div>
+    </body>
+</html>
