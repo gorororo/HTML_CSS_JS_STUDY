@@ -27,7 +27,7 @@ body{
     z-index: 99;
 }
 .local-nav.local-nav-fixed{
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
@@ -59,7 +59,7 @@ section{
 #scroll-section-0 > h1{
     position: relative;
     top: -10vh;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     z-index: 10;
 }
@@ -113,7 +113,7 @@ footer{
     align-items: center;
     top: 35vh;
     height: 4em;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: bolder;
     opacity: 0;
@@ -183,6 +183,12 @@ footer{
     top: 40%;
     left: 20%;
 }
+.gradient{
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
 
 #show-section-0 #scroll-section-0 .sticky-msg,
 #show-section-1 #scroll-section-1 .sticky-msg,
@@ -201,7 +207,7 @@ footer{
         font-size: 10vw;
     }
     .main-msg{
-        font-size: 4vw;
+        font-size: 2vw;
     }
     .mid-msg{
         font-size: 4vw;

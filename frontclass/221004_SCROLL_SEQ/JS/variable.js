@@ -62,8 +62,8 @@ const sceneInfo = [
         },
         values : {
             imges_seq : [0,116],
-            cavas_opcity_in : [0,1,{start:0,end:0.1}],
-            cavas_opcity_out :[1,0,{start:0.9,end:1}],
+            cavas_opcity_in :   [0,1,  {start:0  ,end:0.1}],
+            cavas_opcity_out :  [1,0,  {start:0.9,end:1  }],
             msgA_opcity_in :    [0,1,  {start:0.2,end:0.3}],
             msgA_position_in :  [30,0, {start:0.2,end:0.3}],
             msgA_opcity_out :   [1,0,  {start:0.3,end:0.4}],

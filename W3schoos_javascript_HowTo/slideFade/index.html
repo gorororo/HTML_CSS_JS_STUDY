@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>slide</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
         <div class="slideshow-container">
-            <div class="myslides fade">
+            <div class="mySlides fade">
                 <div class="numbertext">1 / 4</div>
                 <img
                     src="https://www.w3schools.com/howto/img_nature_wide.jpg"
@@ -19,7 +19,7 @@
                 <div class="text">Caption Text</div>
             </div>
 
-            <div class="myslides fade">
+            <div class="mySlides fade">
                 <div class="numbertext">2 / 4</div>
                 <img
                     src="https://www.w3schools.com/howto/img_snow_wide.jpg"
@@ -28,7 +28,7 @@
                 />
                 <div class="text">Caption Text</div>
             </div>
-            <div class="myslides fade">
+            <div class="mySlides fade">
                 <div class="numbertext">3 / 4</div>
                 <img
                     src="https://www.w3schools.com/howto/img_lights_wide.jpg"
@@ -37,7 +37,7 @@
                 />
                 <div class="text">Caption Text</div>
             </div>
-            <div class="myslides fade">
+            <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
                 <img
                     src="https://www.w3schools.com/howto/img_mountains_wide.jpg"
@@ -48,19 +48,19 @@
             </div>
 
             <!--  Next and previous buttons -->
-            <div class="prev" onclick="plusSlides(-1)">&#10094</div>
-            <!--  Next and previous buttons -->
-            <div class="prev" onclick="plusSlides(1)">&#10095</div>
-            <br>
+            <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+            <div class="next" onclick="plusSlides(1)">&#10095;</div>
+            <br />
         </div>
 
         <!-- The dots/circles -->
-        <div style="text-align: center;">
+        <div style="text-align: center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
 
-        <script src="./js/index.js"></script>
+        <script defer src="./js/script.js"></script>
     </body>
 </html>

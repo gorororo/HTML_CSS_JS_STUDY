@@ -241,6 +241,7 @@ const setCanvasImages = () => {
         if(j === 3 ){
             sceneInfo[j].objs.canvas.style.transform = `scale(${heightRatio})`;
             
+            
         }else{
             sceneInfo[j].objs.canvas.style.transform = `translate(-50%,-50%) scale(${heightRatio})`;
         }
