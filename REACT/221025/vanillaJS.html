@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>vanillaJS</title>
+    </head>
+    <body>
+        <span>Total Count : 0</span>
+        <button>Click</button>
+        <script defer>
+            'use strict'
+            let counter = 0;
+            const tagBtn = document.querySelector('button');
+            const tagSpan = document.querySelector('span');
+            const handlerBtnClick=()=>{
+                counter++;
+                tagSpan.textContent = `Total Count : ${counter}`;
+            }
+            tagBtn.addEventListener('click',handlerBtnClick);
+        </script>
+    </body>
+</html>
