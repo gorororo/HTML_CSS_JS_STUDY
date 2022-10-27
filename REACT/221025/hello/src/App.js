@@ -1,26 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Login from './Login'
+import Prop_types from 'prop-types'
+// const World = (props) =>{
+//   return (
+//     <h4>어서오세요 {props.user} 님 </h4>
+//   );
+// }
+const World = (props) =>{
+  let {user} = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          첫번째 리액트 npm 인스톨 <br/>
-          튜토리얼 사이트에 가려면 클릭하세요!.
-        </a>
-      </header>
-    </div>
+    <h4>어서오세요 {user} 님 반갑습니다 </h4>
   );
 }
+const userName = [{id:1,user:'aaa'}, 
+                  {id:2,user:'bbb'}, 
+                  {id:3,user:'ccc'},
+                  {id:4,user:'ddd'},
+                  {id:5,user:'eee'} ];
+// const userName = [{id:1,user:'aaa'}, {id:2,user:'bbb'}, {id:3,user:'ccc'},{id:4,user:'ddd'} ,{id:5,user:'eee'} ];
+
+const getUserWelcome = (elem)=>{
+  return <World key={elem.id} user={elem.user}/>;
+}
+
+const App=()=> {
+  return (
+    <>
+      <h1>Hello</h1>
+      <Login />
+      {
+        userName.map(getUserWelcome)
+      }
+    </>
+  );
+}
+
+World.propTypes= {
+  user : Prop_types.string.isRequired,
+};
+
 
 export default App;
