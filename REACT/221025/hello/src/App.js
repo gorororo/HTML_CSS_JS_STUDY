@@ -1,5 +1,7 @@
-import Login from './Login'
-import Prop_types from 'prop-types'
+import Login from './Login';
+import Prop_types from 'prop-types';
+import Counter from './Counter';
+import AddInput from './AddInput';
 // const World = (props) =>{
 //   return (
 //     <h4>어서오세요 {props.user} 님 </h4>
@@ -30,6 +32,8 @@ const App=()=> {
       {
         userName.map(getUserWelcome)
       }
+      <Counter />
+      <AddInput />
     </>
   );
 }
