@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>볼 애니메이션</title>
-    <script defer >
+    <script defer>
         'use strict';
-        document.addEventListener('DOMContentLoaded',function(){
+        document.addEventListener('click',function(){
             const newCanvas = document.createElement('canvas');
             newCanvas.width = document.documentElement.clientWidth;
             newCanvas.height = document.documentElement.clientHeight;
@@ -107,7 +107,7 @@
         };
     </script>
 </head>
-<body>
-    
+<body style="width: 100%; height: 100%; position: relative;">
+    <h1 style="font-size: 4rem; color: #fff; position: fixed; width: auto; height: auto; z-index: 10; left: 50%; top: 50%;  transform: translate(-50%,-50%);" >Hello World!</h1>
 </body>
 </html>
