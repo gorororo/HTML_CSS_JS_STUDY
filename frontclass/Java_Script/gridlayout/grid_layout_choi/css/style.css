@@ -57,7 +57,14 @@ main > section > p{
     transform: rotateY(180deg);
     transition: 1s;
 }
-
+.modal{
+    background-image: url(../images/y1.png);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
 main > section.on > p{
     transform: rotateY(0deg );
 }
