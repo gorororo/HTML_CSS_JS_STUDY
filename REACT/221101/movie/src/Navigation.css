@@ -1,0 +1,35 @@
+.mainnav{
+
+    width: 290px;
+    height: inherit;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+}
+
+.mainnav h2 {
+    position: fixed;
+    top: 50px;
+    left: 115px;
+
+}
+.mainnav ul {
+    position: fixed;
+    top: 120px;
+    left: 65px;
+    padding: 20px;
+    background-color: whitesmoke;
+    box-shadow: 3px 5px 13px -3px rgba(0,0,0,0.69);
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.mainnav ul li {
+    padding: 10px;
+}
+
+.mainnav ul li:hover{
+    background-color: whitesmoke;
+    color: #8BC6EC;
+}

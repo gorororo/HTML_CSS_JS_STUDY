@@ -1,0 +1,28 @@
+.about-wrap{
+    margin: 0 auto;
+    width: 50%;
+    height: 100vh;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title{
+    text-align: center;
+}
+
+.about-img{
+    width: 100%;
+}
+.about-tag{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.about-overview{
+    margin: 5px;
+    width: 100%;
+    letter-spacing: 2px;
+    line-height: 30px;
+}

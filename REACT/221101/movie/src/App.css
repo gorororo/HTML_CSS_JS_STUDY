@@ -1,10 +1,8 @@
-@charset "utf-8";
-.poster{
-  width: 200px;
+#root{
+    width: 100%;
+    display: flex;
 }
-
-.movie-list{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.App{
+    width: 85%;
+    margin: 0 auto;
 }
